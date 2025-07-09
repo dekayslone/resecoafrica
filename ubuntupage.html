@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ubuntu City Estate | Reseco Africa</title>
+  <link rel="stylesheet" href="ubuntu.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<body>  
+
+ <!-- NAVIGATION -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="assets/Logo/Resecoafrica.svg" alt="Reseco Africa Logo" />
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links desktop-only">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li class="dropdown">
+          <a href="index.html">Properties <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="ubuntupage.html">Ubuntu City</a></li>
+            <li><a href="mandela.html">Mandela Park Estate</a></li>
+            <li><a href="#">Ifokanbale Polo Resort</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+
+      <!-- Desktop Buttons -->
+      <div class="nav-buttons desktop-only">
+        <a href="#" class="btn btn-dark">Join Our Ambassadors</a>
+        <a href="#" class="btn btn-light">Contact Us</a>
+      </div>
+
+      <!-- Hamburger Icon -->
+      <div class="hamburger mobile-only" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="close-menu" id="closeMenu">&times;</div>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li class="dropdown">
+          <a href="#">Properties <span class="arrow"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="ubuntupage.html">Ubuntu City</a></li>
+            <li><a href="mandela.html">Mandela Park Estate</a></li>
+            <li><a href="#">Ifokanbale Polo Resort</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+      <div class="mobile-buttons">
+        <a href="#" class="btn btn-dark">Join Our Ambassadors</a>
+        <a href="#" class="btn btn-light">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+    <section class="property-hero">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="ubuntuvid.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay">
+        <div class="hero-text">
+          <h1 id="heroTitle">Ubuntu City Estate</h1>
+          <p>Premium land investment in the heart of Abuja</p>
+        </div>
+      </div>
+    </section>
+
+
+  <!-- ================= PROPERTY DETAILS ================= -->
+<section class="property-details">
+  <div class="property-details-wrapper">
+    <div class="text-content">
+      <h2>Ubuntu City Estate Overview</h2>
+
+      <p>
+        At Ubuntu City Estate, we redefine real estate investment in Abuja. Strategically located and thoughtfully designed, the estate offers a blend of nature, security, and modern living. Whether you're an investor or a future homeowner, Ubuntu City gives you unmatched value.
+      </p>
+
+      <p>
+        The estate is situated just 5 minutes from Abuja's Central Business District, making it the perfect balance between accessibility and exclusivity. The land is 100% dry and ready for development, eliminating the challenges of site preparation.
+      </p>
+
+      <p>
+        With a verified Certificate of Occupancy (C of O), your ownership is legally guaranteed-offering peace of mind to every buyer. Our infrastructure is designed to scale: perimeter fencing and a modern gatehouse are already in progress, while provisions have been made for underground drainage, street lighting, and reliable power distribution.
+      </p>
+
+      <p>
+        Ubuntu City Estate is more than a piece of land; it's an invitation to join a growing community that believes in legacy, security, and return on investment. Secure your future with a plot in Ubuntu City, where every square meter tells a story of vision and value.
+      </p>
+
+      <a href="#contact" class="cta-btn">Contact Us to Secure a Plot</a>
+    </div>
+  </div>
+</section>
+
+<section class="estate-features">
+  <div class="container">
+    <h2 class="section-title">Estate Features</h2>
+    <div class="features-grid">
+      <div class="feature-item">
+        <img src="assets/icons/gate.png" alt="Well Gated & Fenced Icon" />
+        <h4>Well Gated & Fenced</h4>
+      </div>
+      <div class="feature-item">
+        <img src="assets/icons/verified.png" alt="24 Hour Security Icon" />
+        <h4>24 Hour Security</h4>
+      </div>
+      <div class="feature-item">
+        <img src="assets/icons/contamination.png" alt="Drainage System Icon" />
+        <h4>Good Drainage System</h4>
+      </div>
+      <div class="feature-item">
+        <img src="assets/icons/park.png" alt="Green Areas Icon" />
+        <h4>Green Areas</h4>
+      </div>
+      <div class="feature-item">
+        <img src="assets/icons/shop.png" alt="Commercial Outlets Icon" />
+        <h4>Commercial Outlets</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- ================= INSIDE UBUNTU VIDEO ================= -->
+  <section class="about-videos">
+    <div class="about-videos-container">
+      <h2>Inside Ubuntu City Estate</h2>
+      <p>Click to watch our story:</p>
+
+      <div class="video-thumbnail" onclick="playVideo()">
+        <img src="ubunt.png" alt="Ubuntu City Video" class="thumbnail-img" />
+        <div class="play-overlay">
+          <span class="play-icon">▶</span>
+          <p>Tap to watch</p>
+        </div>
+      </div>
+
+      <video id="resecovideo" class="custom-video" controls loop poster="assets/about/cover.jpg">
+        <source src="Ubuntu City (1).mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <section class="inspection-form-section">
+  <div class="form-container">
+    <h2>Schedule a Site Inspection</h2>
+    <p>Please fill in your details to request a visit to our estate.</p>
+
+    <form id="inspectionForm">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="example@domain.com" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+234 800 000 0000" required />
+      </div>
+
+      <div class="form-group">
+        <label for="inspectionDate">Choose Inspection Date</label>
+        <select id="inspectionDate" name="inspectionDate" required>
+          <option value="">-- Select a date --</option>
+          <option value="2025-07-10">Thursday, July 10 | 3pm</option>
+          <option value="2025-07-12">Saturday, July 12 | 10am</option>
+          <option value="2025-07-15">Tuesday, July 15 | 12pm</option>
+          <option value="2025-07-15">Wednesday, July 23 | 9am</option>
+          <option value="2025-07-15">Tuesday, July 15 | 2pm</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Let us know if you have any requests..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Book Inspection</button>
+    </form>
+  </div>
+</section>
+
+<section class="estate-blog">
+  <div class="container">
+    <h2 class="section-title">Latest on Ubuntu City Estate</h2>
+    <div class="blog-card">
+      <div class="blog-image">
+        <img src="assets/properties/ubuntu.png" alt="Instagram Post Preview">
+      </div>
+      <div class="blog-content">
+        <h3>Why should you invvest in Gwagwalada, Abuja (Ubuntu City Estate)</h3>
+        <p>Catch a glimpse of what makes Gwagwalada, Abuja the perfect location for Ubuntu City Estate investment opportunity. From perks to exclusive features, get the full story in our latest post.</p>
+        <a href="https://www.instagram.com/p/DGm1S2qsDT4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="blog-btn">
+          View on Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= CTA BANNER ================= -->
+  <section class="cta-banner">
+    <div class="cta-content">
+      <h2>Ready to take the next step?</h2>
+      <p>Secure your future with Reseco Africa or become an ambassador of opportunity today.</p>
+      <div class="cta-buttons">
+        <a href="#contact" class="cta-btn primary-btn">Contact Us to Purchase</a>
+        <a href="#ambassadors" class="cta-btn secondary-btn">Join Our Ambassadors</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-top">
+
+      <!-- Footer Brand -->
+      <div class="footer-brand">
+        <img src="/assets/Logo/Resecoafrica.svg" alt="Reseco Africa Logo" />
+        <p>
+          Through every estate we build, we tell the story of Africa’s beauty, strength, grit, and boldness. Redefining the future of the continent through real estate.
+        </p>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="#properties">Properties</a></li>
+          <li><a href="#mission">Our Mission</a></li>
+          <li><a href="#ambassadors">Ambassadors</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Contact -->
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📞 +234 813 247 8371</p>
+        <p>📧 resecoafricaltd@gmail.com</p>
+        <p>📍 Abuja, Nigeria</p>
+
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61572845385795">
+            <img src="assets/icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/resecoafrica/">
+            <img src="assets/icons/instagram.svg" alt="Instagram" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Reseco Africa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="ubuntu.js"></script>
+
+</body>
+</html>

@@ -163,6 +163,6 @@ document.querySelectorAll('.navbar .dropdown').forEach(dropdown => {
   dropdown.addEventListener('mouseleave', () => {
     timeout = setTimeout(() => {
       menu.style.display = 'none';
-    }, 3000);
+    }, 500);
   });
 });
