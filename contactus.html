@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Reseco Africa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="fav.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+<!-- NAVIGATION -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="assets/Logo/Resecoafrica.svg" alt="Reseco Africa Logo" />
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links desktop-only">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li class="dropdown">
+          <a href="index.html">Properties <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="ubuntupage.html">Ubuntu City</a></li>
+            <li><a href="mandela.html">Mandela Park Estate</a></li>
+            <li><a href="ifokanbale.html">Ìfẹ́ọkànbàlẹ̀ Polo Resort</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+
+      <!-- Desktop Buttons -->
+      <div class="nav-buttons desktop-only">
+        <a href="#" class="btn btn-dark">Join Our Ambassadors</a>
+        <a href="contactus.html" class="btn btn-light">Contact Us</a>
+      </div>
+
+      <!-- Hamburger Icon -->
+      <div class="hamburger mobile-only" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="close-menu" id="closeMenu">&times;</div>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li class="dropdown">
+          <a href="#">Properties <span class="arrow"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="ubuntupage.html">Ubuntu City</a></li>
+            <li><a href="mandela.html">Mandela Park Estate</a></li>
+            <li><a href="ifokanbale.html">Ìfẹ́ọkànbàlẹ̀ Polo Resort</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+      <div class="mobile-buttons">
+        <a href="#" class="btn btn-dark">Join Our Ambassadors</a>
+        <a href="#" class="btn btn-light">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / Intro Section -->
+  <section class="contact-hero">
+    <div class="hero-content">
+      <h1>Let's Talk</h1>
+      <p>Have questions, ideas, or looking to work with us? Fill out the form below and we’ll get back to you shortly.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-form-wrapper">
+        <form action="https://script.google.com/macros/s/AKfycbwdo7r0xJUAbKFobn2CeAXAUjF0a_rrlhqQKNbXAq_giSuUt_AygsVxegq9Nk3QDv06/exec" method="POST" class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name <span>*</span></label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span>*</span></label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Optional">
+          </div>
+
+          <div class="form-group">
+            <label for="service">Interested In</label>
+            <select name="service" id="service">
+              <option value=""> Select a Service </option>
+              <option value="real-estate">Real Estate</option>
+              <option value="investment">Investment</option>
+              <option value="partnership">Partnership</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message <span>*</span></label>
+            <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <p><strong>Email:</strong> resecoafricaltd@gmail.com</p>
+          <p><strong>Phone:</strong> +234 813 247 8371</p>
+          <p><strong>Location:</strong> Abuja, Nigeria</p>
+          <p>We typically respond within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+    <div class="g-recaptcha" data-sitekey="6LcOE4grAAAAAEQoXpmoQaFejEBNSCwg4Ps31DTu"></div>
+  </section>
+
+  <!-- ================= CTA BANNER ================= -->
+  <section class="cta-banner">
+    <div class="cta-content">
+      <h2>Ready to take the next step?</h2>
+      <p>Secure your future with Reseco Africa or become an ambassador of opportunity today.</p>
+      <div class="cta-buttons">
+        <a href="#contact" class="cta-btn primary-btn">Contact Us to Purchase</a>
+        <a href="#ambassadors" class="cta-btn secondary-btn">Join Our Ambassadors</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-top">
+
+      <!-- Footer Brand -->
+      <div class="footer-brand">
+        <img src="/assets/Logo/Resecoafrica.svg" alt="Reseco Africa Logo" />
+        <p>
+          Through every estate we build, we tell the story of Africa’s beauty, strength, grit, and boldness. Redefining the future of the continent through real estate.
+        </p>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="#properties">Properties</a></li>
+          <li><a href="#mission">Our Mission</a></li>
+          <li><a href="#ambassadors">Ambassadors</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Contact -->
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📞 +234 813 247 8371</p>
+        <p>📧 resecoafricaltd@gmail.com</p>
+        <p>📍 Abuja, Nigeria</p>
+
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61572845385795">
+            <img src="assets/icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/resecoafrica/">
+            <img src="assets/icons/instagram.svg" alt="Instagram" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Reseco Africa. All rights reserved.</p>
+    </div>
+  </footer>
+
+      <script src="contact.js"></script>
+</body>
+</html>
