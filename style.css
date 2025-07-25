@@ -66,6 +66,11 @@ a {
   z-index: 2;
 }
 
+#hero-text {
+  transition: opacity 0.5s ease-in-out;
+}
+
+
 /* ========== Navbar ========== */
 .navbar {
   position: absolute;

@@ -2,36 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us | Reseco Africa</title>
-  <link rel="stylesheet" href="about.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- 🧩 SEO Meta Tags -->
+  <meta name="description" content="Reseco Africa: Revolutionizing real estate in Africa through visionary design, strong communities, and sustainable innovation."/>
+  <meta name="keywords" content="Reseco Africa, real estate, hospitality, construction, property management, Africa"/>
+  <meta name="author" content="Reseco Africa"/>
+  <link rel="canonical" href="https://dekayslone.github.io/resecoafrica/aboutus.html"/>
+
+  <!-- 🌐 Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="About Us | Reseco Africa"/>
+  <meta property="og:description" content="Discover who we are, what sets us apart, and explore our story through video and vision."/>
+  <meta property="og:url" content="https://dekayslone.github.io/resecoafrica/aboutus.html"/>
+  <meta property="og:image" content="https://dekayslone.github.io/resecoafrica/assets/og-aboutus.jpg"/>
+
+  <!-- ✅ Styles & AOS -->
+  <link rel="stylesheet" href="about.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
-
   <!-- NAVBAR + HERO -->
   <header>
     <nav class="navbar">
       <a href="index.html" class="logo">
         <img src="assets/Logo/Resecoafrica.svg" alt="Reseco Africa Logo">
       </a>
+
+      <!-- Desktop Nav -->
       <ul class="nav-links">
         <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Properties</a></li>
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">Events</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li class="dropdown">
+          <a href="#" onclick="toggleMobileDropdown(event)">Properties <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="ubuntupage.html">Ubuntu City</a></li>
+            <li><a href="mandela.html">Mandela Park Estate</a></li>
+            <li><a href="ifokanbale.html">Ifokanbale Polo Resort</a></li>
+          </ul>
+        </li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="events.html">Events</a></li>
       </ul>
+
       <div class="nav-buttons">
-        <a href="#" class="btn btn-ambassador">Join Ambassadors</a>
-        <a href="#" class="btn btn-contact">Contact Us</a>
+        <a href="joinamb.html" class="btn btn-ambassador">Join Ambassadors</a>
+        <a href="contactus.html" class="btn btn-contact">Contact Us</a>
       </div>
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
+
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger" id="hamburger">☰</div>
     </nav>
 
-    <section class="about-hero">
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav" id="mobileNav">
+      <div class="close-btn" onclick="toggleMobileMenu()">×</div>
+      <ul class="mobile-links">
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li class="dropdown">
+          <a href="#" onclick="toggleMobileDropdown(event)">Properties <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="ubuntupage.html">Ubuntu City</a></li>
+            <li><a href="mandela.html">Mandela Park Estate</a></li>
+            <li><a href="ifokanbale.html">Ifokanbale Polo Resort</a></li>
+          </ul>
+        </li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="events.html">Events</a></li>
+      </ul>
+      <div class="mobile-buttons">
+        <a href="joinamb.html" class="btn btn-ambassador">Our Ambassadors</a>
+        <a href="contactus.html" class="btn btn-contact">Contact Us</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="about-hero" data-aos="fade-up">
       <div class="about-hero-content">
         <h1>About Reseco Africa</h1>
         <p>Empowering individuals and communities through smart real estate investment.</p>
@@ -40,13 +89,11 @@
   </header>
 
   <!-- WHO WE ARE -->
-  <section class="about-overview">
+  <section class="about-overview" data-aos="fade-right">
     <div class="about-overview-container">
       <div class="about-text">
         <h2>Who We Are</h2>
-        <p>
-           Reseco Africa is a visionary company reshaping the landscape of  real estate and enterprise across the continent. We are not just developers, we are builders of experiences, architects of opportunity, and pioneers of a new African narrative. From luxurious properties to transformative events and innovative solutions, everything we create is rooted in excellence, purpose, and impact. Our mission is bold: to raise standards, empower communities, and position Africa as a global force. At Reseco, we don’t follow trends, we set them. We don’t wait for the future, we build it. This is who we are. This is Reseco Africa.
-        </p>
+        <p>Reseco Africa is a visionary company reshaping the landscape of real estate and enterprise across the continent. We are not just developers, we are builders of experiences, architects of opportunity, and pioneers of a new African narrative. From luxurious properties to transformative events and innovative solutions, everything we create is rooted in excellence, purpose, and impact. Our mission is bold: to raise standards, empower communities, and position Africa as a global force. At Reseco, we don’t follow trends, we set them. We don’t wait for the future, we build it. This is who we are. This is Reseco Africa.</p>
       </div>
       <div class="about-image">
         <img src="assets/city4.jpg" alt="Reseco Team">
@@ -55,25 +102,20 @@
   </section>
 
   <!-- WHAT SETS US APART -->
-  <section class="about-values">
+  <section class="about-values" data-aos="fade-left">
     <div class="about-values-container">
       <div class="values-image">
         <img src="assets/city5.jpg" alt="Reseco Difference">
       </div>
       <div class="values-text">
         <h2>What Sets Us Apart</h2>
-      <p>At Reseco Africa, every estate we build tells a deeper story, one of Africa’s beauty, strength, and bold spirit. We don’t just develop land; we shape legacies, create communities, and celebrate culture. 
-        Each project is a bold statement: Africa is rising powerful, resilient, and ready. Our work reflects more than architecture; it reflects identity, pride, and the promise of a redefined future.
-        We design with meaning, build with purpose, and lead with a vision that honors the continent’s past while boldly shaping its tomorrow.
-        This isn't just real estate.
-        This is storytelling through structure.
-        This is Africa, built by Reseco.</p>
+        <p>At Reseco Africa, every estate we build tells a deeper story, one of Africa’s beauty, strength, and bold spirit. We don’t just develop land; we shape legacies, create communities, and celebrate culture. Each project is a bold statement: Africa is rising—powerful, resilient, and ready. Our work reflects more than architecture; it reflects identity, pride, and the promise of a redefined future. We design with meaning, build with purpose, and lead with a vision that honors the continent’s past while boldly shaping its tomorrow. This isn't just real estate. This is storytelling through structure. This is Africa, built by Reseco.</p>
       </div>
     </div>
   </section>
 
   <!-- VIDEO -->
-  <section class="about-videos">
+  <section class="about-videos" data-aos="zoom-in">
     <div class="about-videos-container">
       <h2>Inside Reseco Africa</h2>
       <p>Click to watch our story:</p>
@@ -86,25 +128,24 @@
       </div>
       <video id="resecovideo" class="custom-video" controls loop muted poster="assets/about/cover.jpg">
         <source src="Reseco Africa.mp4" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="cta-banner">
+  <section class="cta-banner" data-aos="fade-up">
     <div class="cta-content">
       <h2>Ready to take the next step?</h2>
       <p>Secure your future with Reseco Africa or join our ambassadors today.</p>
       <div class="cta-buttons">
-        <a href="#contact" class="cta-btn primary-btn">Contact Us to Purchase</a>
-        <a href="#ambassadors" class="cta-btn secondary-btn">Join Our Ambassadors</a>
+        <a href="contactus.html" class="cta-btn primary-btn">Contact Us to Purchase</a>
+        <a href="joinamb.html" class="cta-btn secondary-btn">Join Our Ambassadors</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer" data-aos="fade-up">
     <div class="footer-top">
       <div class="footer-brand">
         <img src="assets/Logo/Resecoafrica.svg" alt="Logo">
@@ -113,11 +154,11 @@
       <div class="footer-links">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#properties">Properties</a></li>
-          <li><a href="#mission">Our Mission</a></li>
-          <li><a href="#ambassadors">Ambassadors</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="joinamb.html">Ambassadors</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer-contact">
@@ -126,8 +167,8 @@
         <p>📧 resecoafricaltd@gmail.com</p>
         <p>📍 Abuja, Nigeria</p>
         <div class="footer-socials">
-          <a href="https://www.facebook.com/profile.php?id=61572845385795"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
-          <a href="https://www.instagram.com/resecoafrica/"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+          <a href="https://facebook.com/resecoafrica"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+          <a href="https://instagram.com/resecoafrica"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
         </div>
       </div>
     </div>
@@ -136,6 +177,33 @@
     </div>
   </footer>
 
-  <script src="aboutus.js"></script>
+  <!-- 🧠 Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    function playVideo() {
+      const video = document.getElementById("resecovideo");
+      document.querySelector(".video-thumbnail").style.display = "none";
+      video.style.display = "block";
+      video.muted = false;
+      video.play();
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById("mobileNav").classList.toggle("open");
+    }
+
+    function toggleMobileDropdown(e) {
+      e.preventDefault();
+      e.target.closest(".dropdown").classList.toggle("open");
+    }
+
+    document.getElementById("hamburger").addEventListener("click", toggleMobileMenu);
+    window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+    });
+  </script>
 </body>
 </html>

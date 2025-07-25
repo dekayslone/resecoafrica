@@ -32,12 +32,15 @@ setInterval(() => {
 }, 5000);
 
 // ======================= ROTATING TEXT =======================
-const rotatingText = document.querySelector('.rotating-text');
-const words = ['Reseco Africa', 'Innovative', 'Sustainable', 'Creative', 'Driven'];
+let rotateIndex = 0;
+const rotateDivs = rotatingText?.querySelectorAll('div');
 
-if (rotatingText) {
-  rotatingText.innerHTML = words.map(word => `<div>${word}</div>`).join('');
-}
+setInterval(() => {
+  rotateDivs?.forEach((div, i) => {
+    div.style.display = i === rotateIndex ? 'block' : 'none';
+  });
+  rotateIndex = (rotateIndex + 1) % rotateDivs.length;
+}, 2000);
 
 // ======================= HAMBURGER MENU =======================
 const hamburger = document.querySelector('.hamburger');
@@ -149,6 +152,24 @@ dropdown.addEventListener('mouseleave', () => {
   hideTimeout = setTimeout(() => {
     dropdown.classList.remove('active');
   }, 3000);
+});
+
+document.querySelectorAll('.navbar .dropdown').forEach(dropdown => {
+  const menu = dropdown.querySelector('.dropdown-menu');
+  let timeout;
+
+  dropdown.addEventListener('mouseenter', () => {
+    clearTimeout(timeout);
+    menu.style.display = 'block';
+    dropdown.classList.add('active');
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    timeout = setTimeout(() => {
+      menu.style.display = 'none';
+      dropdown.classList.remove('active');
+    }, 500);
+  });
 });
 
 document.querySelectorAll('.navbar .dropdown').forEach(dropdown => {
