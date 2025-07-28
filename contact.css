@@ -367,9 +367,64 @@ textarea {
   background-color: #0b3426;
 }
 
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: opacity 0.3s;
+}
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #4CAF50;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+#loading-overlay p {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* Success Popup */
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4CAF50;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -20%); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Hidden Class */
+.hidden {
+  display: none !important;
+}
+
 /* ================= CONTACT INFO ================= */
 .contact-info {
   background: var(--white);
+  max-height: min-content;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);

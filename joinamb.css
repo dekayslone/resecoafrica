@@ -369,10 +369,11 @@
     cursor: pointer;
     transition: background-color var(--transition);
     font-size: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .submit-btn:hover {
-    background-color: #0b3426;
+    background-color: #4fc874;
   }
 
   /* ================= SUCCESS POPUP (optional) ================= */

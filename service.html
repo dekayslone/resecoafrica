@@ -8,62 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-      <header>
-  <nav class="navbar">
-    <div class="logo">
-      <img src="assets/reseco-logo.png" alt="Reseco Africa Logo" />
-    </div>
-    <ul class="nav-links">
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li class="dropdown">
-        <a href="#">Properties ▼</a>
-        <ul class="dropdown-menu">
-          <li><a href="ubuntu-city-estate.html">Ubuntu City Estate</a></li>
-          <li><a href="eden-court.html">Eden Court</a></li>
-        </ul>
-      </li>
-      <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="ambassadors.html"><strong>Join Our Ambassadors</strong></a></li>
-      <li><a href="contact.html"><strong>Contact Us</strong></a></li>
-    </ul>
-  </nav>
-      <!-- Hamburger Icon -->
-      <div class="hamburger" id="hamburger">
-        <span class="arrow">▼</span>
-        <span></span><span></span><span></span>
-      </div>
+    <header class="header">
 
-      <!-- Mobile Menu -->
-      <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-header">
-          <span class="close-menu" id="closeMenu">&times;</span>
-        </div>
-        <ul>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="service.html">Services</a></li>
-          <li class="dropdown">
-            <a href="#">Properties <span class="arrow">▼</span></a>
-            <ul class="dropdown-menu">
-              <li><a href="ubuntupage.html">Ubuntu City</a></li>
-              <li><a href="mandela.html">Mandela Park Estate</a></li>
-              <li><a href="ifokanbale.html">Ifokanbale Polo Resort</a></li>
-            </ul>
-          </li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="event.html">Events</a></li>
-        </ul>
-        <div class="mobile-buttons">
-          <a href="joinamb.html" class="btn btn-ambassador">Join Our Ambassadors</a>
-          <a href="contactus.html" class="btn btn-contact">Contact Us</a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-    <!-- Hero Section -->
-  <section class="hero-banner">
+        <section class="hero-banner">
     <div class="hero-overlay">
       <div class="hero-content">
         <h1>Our Services</h1>
@@ -71,6 +18,70 @@
       </div>
     </div>
   </section>
+
+  
+    <nav class="navbar">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="assets/Logo/Resecoafrica.svg" alt="Reseco Africa Logo" />
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links desktop-only">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li class="dropdown">
+          <a href="index.html">Properties <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="ubuntupage.html">Ubuntu City</a></li>
+            <li><a href="mandela.html">Mandela Park Estate</a></li>
+            <li><a href="#">Ifokanbale Polo Resort</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+
+      <!-- Desktop Buttons -->
+      <div class="nav-buttons desktop-only">
+        <a href="#" class="btn btn-dark">Join Our Ambassadors</a>
+        <a href="#" class="btn btn-light">Contact Us</a>
+      </div>
+
+      <!-- Hamburger Icon -->
+      <div class="hamburger mobile-only" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="close-menu" id="closeMenu">&times;</div>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li class="dropdown">
+          <a href="#">Properties <span class="arrow"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Ubuntu City</a></li>
+            <li><a href="#">Mandela Park Estate</a></li>
+            <li><a href="#">Ifokanbale Polo Resort</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+      <div class="mobile-buttons">
+        <a href="#" class="btn btn-dark">Join Our Ambassadors</a>
+        <a href="#" class="btn btn-light">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+    <!-- Hero Section -->
+
 
   <main class="services-section">
     <section class="service-block">
@@ -162,6 +173,6 @@
     <p>&copy; 2025 Reseco Africa. All rights reserved.</p>
   </div>
 </footer>
-  </main>
+
 </body>
 </html>
