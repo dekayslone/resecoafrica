@@ -4,88 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Services - Reseco Africa</title>
+  <meta name="description" content="Explore premium real estate, property management, construction, and hospitality services offered by Reseco Africa." />
+  <meta name="keywords" content="Reseco Africa, real estate, property management, hospitality, construction, Africa properties" />
+  <meta name="author" content="Reseco Africa" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="services.css" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+
+  <!-- ========== HEADER ========== -->
+  <header>
     <nav class="navbar">
-      <!-- Logo -->
       <a href="index.html" class="logo">
         <img src="assets/Logo/Resecoafrica.svg" alt="Reseco Africa Logo" />
       </a>
 
-      <!-- Desktop Links -->
+      <!-- Desktop Navigation -->
       <ul class="nav-links desktop-only">
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
         <li class="dropdown">
-          <a href="index.html">Properties <span class="arrow">▼</span></a>
+          <a href="#">Properties <span class="arrow">▼</span></a>
           <ul class="dropdown-menu">
             <li><a href="ubuntupage.html">Ubuntu City</a></li>
             <li><a href="mandela.html">Mandela Park Estate</a></li>
-            <li><a href="#">Ifokanbale Polo Resort</a></li>
+            <li><a href="ifokanbale.html">Ifokanbale Polo Resort</a></li>
           </ul>
         </li>
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">Events</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="event.html">Events</a></li>
       </ul>
 
       <!-- Desktop Buttons -->
       <div class="nav-buttons desktop-only">
-        <a href="#" class="btn btn-dark">Join Our Ambassadors</a>
-        <a href="#" class="btn btn-light">Contact Us</a>
+        <a href="joinamb.html" class="btn btn-ambassador">Join Our Ambassadors</a>
+        <a href="contactus.html" class="btn btn-contact">Contact Us</a>
       </div>
 
-      <!-- Hamburger Icon -->
-      <div class="hamburger mobile-only" id="hamburger">
+      <!-- Hamburger for Mobile -->
+      <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-header">
+          <span class="close-menu" id="closeMenu">&times;</span>
+        </div>
+        <ul>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li class="dropdown">
+            <a href="#">Properties <span class="arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="ubuntupage.html">Ubuntu City</a></li>
+              <li><a href="mandela.html">Mandela Park Estate</a></li>
+              <li><a href="ifokanbale.html">Ifokanbale Polo Resort</a></li>
+            </ul>
+          </li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="event.html">Events</a></li>
+        </ul>
+        <div class="mobile-buttons">
+          <a href="joinamb.html" class="btn btn-ambassador">Join Our Ambassadors</a>
+          <a href="contactus.html" class="btn btn-contact">Contact Us</a>
+        </div>
       </div>
     </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-      <div class="close-menu" id="closeMenu">&times;</div>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li class="dropdown">
-          <a href="#">Properties <span class="arrow"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Ubuntu City</a></li>
-            <li><a href="#">Mandela Park Estate</a></li>
-            <li><a href="#">Ifokanbale Polo Resort</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">Events</a></li>
-      </ul>
-      <div class="mobile-buttons">
-        <a href="#" class="btn btn-dark">Join Our Ambassadors</a>
-        <a href="#" class="btn btn-light">Contact Us</a>
-      </div>
-    </div>
   </header>
 
-    <!-- Hero Section -->
+  <!-- ========== HERO BANNER ========== -->
+  <section class="hero-banner">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Our Services</h1>
+        <p>Discover how Reseco Africa is transforming real estate across the continent.</p>
+      </div>
+    </div>
+  </section>
 
-
+  <!-- ========== SERVICES SECTION ========== -->
   <main class="services-section">
+    <!-- Real Estate -->
     <section class="service-block">
       <div class="service-text">
         <h2>Real Estate Services</h2>
         <p>We redefine African living through premium estate development, architectural innovation, and community-driven planning. Our estates reflect modern lifestyle, culture, and excellence.</p>
       </div>
       <div class="service-image">
-        <img src="images/real-estate.jpg" alt="Real Estate" />
+        <img src="assets/city5.jpg" alt="Modern African estate buildings" />
       </div>
     </section>
 
+    <!-- Property Management -->
     <section class="service-block reverse">
       <div class="service-image">
-        <img src="images/property-management.jpg" alt="Property Management" />
+        <img src="assets/city2.png" alt="Professional property management team" />
       </div>
       <div class="service-text">
         <h2>Property Management</h2>
@@ -93,19 +110,21 @@
       </div>
     </section>
 
+    <!-- Hospitality -->
     <section class="service-block">
       <div class="service-text">
         <h2>Hospitality</h2>
         <p>We create exceptional guest experiences through hospitality projects that blend African warmth, luxury, and modern comfort. Hotels, resorts, and serviced apartments—done right.</p>
       </div>
       <div class="service-image">
-        <img src="images/hospitality.jpg" alt="Hospitality Services" />
+        <img src="assets/city.jpg" alt="Elegant hospitality interior design in Africa" />
       </div>
     </section>
 
+    <!-- Construction -->
     <section class="service-block reverse">
       <div class="service-image">
-        <img src="images/construction.jpg" alt="Construction Services" />
+        <img src="assets/og-image.png" alt="Construction team building infrastructure" />
       </div>
       <div class="service-text">
         <h2>Construction</h2>
@@ -113,55 +132,69 @@
       </div>
     </section>
 
+    <!-- ========== CALL TO ACTION ========== -->
     <section class="cta-banner">
-  <div class="cta-content">
-    <h2>Ready to take the next step?</h2>
-    <p>Secure your future with Reseco Africa or become an ambassador of opportunity today.</p>
-    <div class="cta-buttons">
-      <a href="#contact" class="cta-btn primary-btn">Contact Us to Purchase</a>
-      <a href="#ambassadors" class="cta-btn secondary-btn">Join Our Ambassadors</a>
-    </div>
-  </div>
-</section>
+      <div class="cta-content">
+        <h2>Ready to take the next step?</h2>
+        <p>Secure your future with Reseco Africa or become an ambassador of opportunity today.</p>
+        <div class="cta-buttons">
+          <a href="contactus.html" class="cta-btn primary-btn">Contact Us to Purchase</a>
+          <a href="joinamb.html" class="cta-btn secondary-btn">Join Our Ambassadors</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/Logo/Resecoafrica.svg" alt="Reseco Africa Logo">
+        <p>Through every estate we build, we tell the story of Africa’s beauty, strength, grit, and boldness. Redefining the future of the continent through real estate.</p>
+      </div>
 
-<footer class="footer">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <img src="assets/Logo/Resecoafrica.svg" alt="Reseco Africa Logo">
-      <p>Through every estate we build, we tell the story of Africa’s beauty, strength, grit, and boldness. Redefining the future of the continent through real estate.</p>
-    </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="ubuntupage.html">Properties</a></li>
+          <li><a href="event.html">Events</a></li>
+          <li><a href="joinamb.html">Ambassadors</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </div>
 
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="#properties">Properties</a></li>
-        <li><a href="event.html">Events</a></li>
-        <li><a href="joinamb.html">Ambassadors</a></li>
-        <li><a href="contactus.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Info -->
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <p>📞 +234 813 247 8371</p>
-      <p>📧 resecoafricaltd@gmail.com</p>
-      <p>📍 Abuja, Nigeria</p>
-
-      <div class="footer-socials">
-        <a href="https://www.facebook.com/profile.php?id=61572845385795"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
-        <a href="https://www.instagram.com/resecoafrica/"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📞 +234 813 247 8371</p>
+        <p>📧 resecoafricaltd@gmail.com</p>
+        <p>📍 Abuja, Nigeria</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61572845385795"><img src="assets/icons/facebook.svg" alt="Facebook Icon"></a>
+          <a href="https://www.instagram.com/resecoafrica/"><img src="assets/icons/instagram.svg" alt="Instagram Icon"></a>
+        </div>
       </div>
     </div>
 
-  </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Reseco Africa. All rights reserved.</p>
+    </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p>&copy; 2025 Reseco Africa. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+    });
+  </script>
 
 </body>
 </html>
