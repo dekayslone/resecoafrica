@@ -307,7 +307,6 @@ a {
   transition: opacity 0.5s ease-in-out;
 }
 
-/* ——— INTRO SECTION ——— */
 .intro-section {
   position: relative;
   z-index: 1;
@@ -342,7 +341,6 @@ a {
   color: var(--dark-green);
 }
 
-/* ——— RESPONSIVE ——— */
 @media (max-width: 992px) {
   .desktop-only {
     display: none;
@@ -360,7 +358,7 @@ a {
 }
 
 .hero-title {
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 700;
   color: #f4ffec;
   text-align: center;

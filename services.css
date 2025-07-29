@@ -63,6 +63,7 @@ body {
   font-weight: 600;
 }
 
+/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -70,7 +71,6 @@ body {
 .dropdown .arrow {
   margin-left: 6px;
   display: inline-block;
-  vertical-align: middle;
   transition: transform 0.3s ease;
 }
 
@@ -133,7 +133,7 @@ body {
   color: var(--dark-green);
 }
 
-/* ========== HAMBURGER + MOBILE MENU ========== */
+/* ========== HAMBURGER ========== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -149,6 +149,7 @@ body {
   border-radius: 2px;
 }
 
+/* ========== MOBILE MENU ========== */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -232,8 +233,8 @@ body {
   background: url('assets/city5.jpg') center/cover no-repeat;
   position: relative;
   display: flex;
-  align-items: center; /* vertical centering */
-  justify-content: center; /* horizontal centering */
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-overlay {
@@ -247,13 +248,11 @@ body {
   position: relative;
   z-index: 1;
   text-align: center;
-  vertical-align: middle;
   color: var(--off-white);
   padding: 0 1rem;
   max-width: 800px;
   margin: 0 auto;
 }
-
 
 .hero-content h1 {
   font-size: 3rem;
@@ -263,8 +262,11 @@ body {
   font-size: 1.2rem;
   margin-top: 0.5rem;
   max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* ========== SERVICES ========== */
 .services-section {
   display: flex;
   flex-direction: column;
