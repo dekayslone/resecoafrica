@@ -35,3 +35,24 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     };
   });
+
+    // Toggle mobile menu open
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.add("open");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.remove("open");
+  });
+
+  // Optional: Close menu when a link is clicked
+  const mobileLinks = mobileMenu.querySelectorAll("a");
+  mobileLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+    });
+  });

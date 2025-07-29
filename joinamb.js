@@ -1,18 +1,39 @@
-// joinamb.js
+ document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeMenuBtn = document.querySelector('.close-menu');
 
-// Toggle mobile nav menu
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('nav');
+    // Open mobile menu on hamburger click
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      document.body.style.overflow = 'hidden'; // Prevent background scroll
+    });
 
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('show');
+    // Close mobile menu on close button click
+    closeMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = ''; // Restore scroll
+    });
+
+    // Optional: Close mobile menu when a link is clicked
+    const mobileLinks = document.querySelectorAll('.mobile-menu a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
   });
 
-  // Optional: Close nav when clicking outside (mobile)
-  document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
-      nav.classList.remove('show');
-    }
+  document.addEventListener('DOMContentLoaded', () => {
+  const dropdowns = document.querySelectorAll('.mobile-menu .dropdown');
+
+  dropdowns.forEach(drop => {
+    const anchor = drop.querySelector('a');
+
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault(); // prevent link navigation
+      drop.classList.toggle('open');
+    });
   });
 });

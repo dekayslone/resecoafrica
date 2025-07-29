@@ -56,6 +56,7 @@ body {
   color: var(--off-white);
   font-weight: 500;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .nav-links li a:hover {
@@ -87,6 +88,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 6px 12px var(--black-transparent);
   z-index: 100;
+  list-style: none;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -126,11 +128,13 @@ body {
 .btn-ambassador {
   background: linear-gradient(135deg, var(--mid-green), var(--dark-green));
   color: var(--off-white);
+  text-decoration: none;
 }
 
 .btn-contact {
   background: var(--light-green);
   color: var(--dark-green);
+  text-decoration: none;
 }
 
 /* ========== HAMBURGER ========== */
