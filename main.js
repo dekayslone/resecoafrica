@@ -3,12 +3,12 @@ const heroWrapper = document.querySelector('.hero-wrapper');
 const heroText = document.getElementById('hero-text');
 
 const slides = [
-  { image: 'assets/backgroundimages/slide1.jpg', text: 'Real Estate' },
-  { image: 'assets/backgroundimages/slide2.jpg', text: 'Luxury' },
-  { image: 'assets/backgroundimages/slide3.jpg', text: 'Ecosystem' },
-  { image: 'assets/backgroundimages/slide4.jpg', text: 'Africa' },
-  { image: 'assets/backgroundimages/slide5.jpg', text: 'Affordable' },
-  { image: 'assets/backgroundimages/slide6.jpg', text: 'Excellence' }
+  { image: 'assets/backgroundimages/slide1.png', text: 'Real Estate' },
+  { image: 'assets/backgroundimages/slide2.png', text: 'Luxury' },
+  { image: 'assets/backgroundimages/slide3.png', text: 'Ecosystem' },
+  { image: 'assets/backgroundimages/slide4.png', text: 'Africa' },
+  { image: 'assets/backgroundimages/slide5.png', text: 'Affordable' },
+  { image: 'assets/backgroundimages/slide6.png', text: 'Excellence' }
 ];
 
 let currentSlide = 0;
