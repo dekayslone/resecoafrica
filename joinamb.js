@@ -42,7 +42,7 @@
   const btnText = document.getElementById("btnText"); // span inside button
   const loader = document.getElementById("loader");   // loader element
   const formNotice = document.getElementById("formNotice"); // message area
-  const scriptURL = "YOUR_GOOGLE_SCRIPT_URL_HERE";    // replace with your Apps Script URL
+  const scriptURL = "https://script.google.com/macros/s/AKfycbx57Wit645v-vLXBD83dm4klH44e7Il6jHrNGGjkhmR768D3F2lsnO0X37GFe82ZtIh/exec";    // replace with your Apps Script URL
 
   if (!form) return;
 
