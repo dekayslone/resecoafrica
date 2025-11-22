@@ -1,48 +1,50 @@
-  /* ==============================
-     MOBILE NAVIGATION
-  ============================== */
-  const hamburger = document.querySelector('.hamburger');
-  const mobileMenu = document.querySelector('.mobile-menu');
-  const closeMenuBtn = document.querySelector('.close-menu');
-  const mobileLinks = document.querySelectorAll('.mobile-menu a');
-  const dropdowns = document.querySelectorAll('.mobile-menu .dropdown');
+/* ==============================
+   MOBILE NAVIGATION
+============================== */
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
+const closeMenuBtn = document.querySelector('.close-menu');
+const mobileLinks = document.querySelectorAll('.mobile-menu a');
+const dropdowns = document.querySelectorAll('.mobile-menu .dropdown');
 
-  // Open menu
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  });
+// Open menu
+hamburger?.addEventListener('click', () => {
+  mobileMenu.classList.add('open');
+  document.body.classList.add('no-scroll'); // use CSS instead of inline style
+});
 
-  // Close menu
-  closeMenuBtn.addEventListener('click', () => {
+// Close menu
+closeMenuBtn?.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+  document.body.classList.remove('no-scroll');
+});
+
+// Close when link is clicked
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
-    document.body.style.overflow = '';
+    document.body.classList.remove('no-scroll');
   });
+});
 
-  // Close when link is clicked
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
-
-  // Toggle dropdowns in mobile nav
-  dropdowns.forEach(drop => {
-    const anchor = drop.querySelector('a');
-    anchor.addEventListener('click', (e) => {
+// Toggle dropdowns in mobile nav
+dropdowns.forEach(drop => {
+  const toggle = drop.querySelector('.dropdown-toggle'); // better than generic <a>
+  if (toggle) {
+    toggle.addEventListener('click', (e) => {
       e.preventDefault();
       drop.classList.toggle('open');
     });
-  });
+  }
+});
 
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("ambassadorForm");
   const submitBtn = document.getElementById("submitBtn");
-  const btnText = document.getElementById("btnText"); // span inside button
-  const loader = document.getElementById("loader");   // loader element
-  const formNotice = document.getElementById("formNotice"); // message area
-  const scriptURL = "YOUR_GOOGLE_SCRIPT_URL_HERE";    // replace with your Apps Script URL
+  const btnText = document.getElementById("btnText");
+  const loader = document.getElementById("loader");
+  const formNotice = document.getElementById("formNotice");
+  const scriptURL = "https://script.google.com/macros/s/AKfycbxis4dOTVggn-zoC0qb5R4lmLLRrI_UaH6P0R_HAGKWCiSvCKsMkBLh98th77oOKyey/exec";
 
   if (!form) return;
 
@@ -56,27 +58,22 @@
     formNotice.style.display = "none";
 
     try {
-      // Collect form data
       const formData = Object.fromEntries(new FormData(form).entries());
 
-      // Send request
       const res = await fetch(scriptURL, {
         method: "POST",
         body: JSON.stringify(formData),
         headers: { "Content-Type": "application/json" }
       });
 
-      // Try parse JSON (Apps Script must return JSON)
-      let data;
+      let data = {};
       try {
         data = await res.json();
       } catch {
-        data = { result: "success" }; // fallback if no JSON returned
+        data = { result: "error", message: "Invalid server response" };
       }
 
-      // Handle response
       if (data.result === "success") {
-        if (data.result === "success") {
         formNotice.innerHTML = `
           ✅ Your application has been submitted successfully! <br><br>
           To complete your onboarding, please join our exclusive Ambassador WhatsApp group using the link below: <br>
@@ -87,7 +84,6 @@
         formNotice.className = "form-notice success";
         formNotice.style.display = "block";
         form.reset();
-      }
       } else {
         formNotice.textContent = "⚠️ Submission failed: " + (data.message || "Unknown error");
         formNotice.className = "form-notice error";
@@ -99,7 +95,6 @@
       formNotice.className = "form-notice error";
       formNotice.style.display = "block";
     } finally {
-      // Reset button + loader
       submitBtn.disabled = false;
       btnText.textContent = "Submit Application";
       loader.style.display = "none";
