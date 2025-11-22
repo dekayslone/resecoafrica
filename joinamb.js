@@ -41,10 +41,17 @@ dropdowns.forEach(drop => {
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("ambassadorForm");
   const submitBtn = document.getElementById("submitBtn");
+<<<<<<< HEAD
   const btnText = document.getElementById("btnText");
   const loader = document.getElementById("loader");
   const formNotice = document.getElementById("formNotice");
   const scriptURL = "https://script.google.com/macros/s/AKfycbxis4dOTVggn-zoC0qb5R4lmLLRrI_UaH6P0R_HAGKWCiSvCKsMkBLh98th77oOKyey/exec";
+=======
+  const btnText = document.getElementById("btnText"); // span inside button
+  const loader = document.getElementById("loader");   // loader element
+  const formNotice = document.getElementById("formNotice"); // message area
+  const scriptURL = "https://script.google.com/macros/s/AKfycbx57Wit645v-vLXBD83dm4klH44e7Il6jHrNGGjkhmR768D3F2lsnO0X37GFe82ZtIh/exec";    // replace with your Apps Script URL
+>>>>>>> 66cf57965fd23a96a8de9345a528d4a045ac850a
 
   if (!form) return;
 
