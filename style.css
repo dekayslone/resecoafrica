@@ -468,75 +468,572 @@ a {
 }
 
 .mvv-section {
-  background: linear-gradient(rgba(27, 56, 43, 0.65), rgba(27, 56, 43, 0.85)),
-              url('assets/city.jpg') no-repeat center center;
-  background-size: cover;
-  padding: 100px 5%;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  color: #f4ffec;
-}
+      background: linear-gradient(135deg, #1b382b 0%, #2f5c45 50%, #1a3a2e 100%);
+      padding: 140px 5%;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.mvv-content {
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-}
+    /* Animated Background Elements */
+    .mvv-bg-elements {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
 
-.mvv-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 40px;
-  color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
+    .mvv-shape {
+      position: absolute;
+      opacity: 0.05;
+    }
 
-.mvv-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 30px;
-}
+    .mvv-shape-1 {
+      width: 600px;
+      height: 600px;
+      background: #4fc874;
+      border-radius: 50%;
+      top: -200px;
+      right: -100px;
+      animation: float 20s ease-in-out infinite;
+    }
 
-.mvv-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 30px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
+    .mvv-shape-2 {
+      width: 500px;
+      height: 500px;
+      background: #82d89d;
+      border-radius: 50%;
+      bottom: -150px;
+      left: -100px;
+      animation: float 25s ease-in-out infinite reverse;
+    }
 
-.mvv-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.08);
-}
+    .mvv-shape-3 {
+      width: 300px;
+      height: 300px;
+      background: #4fc874;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      top: 50%;
+      right: 10%;
+      animation: rotate 30s linear infinite;
+    }
 
-.mvv-icon {
-  font-size: 2.2rem;
-  margin-bottom: 16px;
-}
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(40px); }
+    }
 
-.mvv-card h3 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 12px;
-}
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
 
-.mvv-card p,
-.mvv-card ul {
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.6;
-  color: #e8fce0;
-}
+    /* Main Container */
+    .mvv-container {
+      max-width: 1400px;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
 
-.mvv-card ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin: 0;
-}
+    /* Header */
+    .mvv-header {
+      text-align: center;
+      margin-bottom: 100px;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .mvv-header h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .mvv-header p {
+      font-size: 1.3rem;
+      color: #a4f8c7;
+      font-weight: 500;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Divider */
+    .mvv-divider {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #4fc874, transparent);
+      margin: 30px auto 0;
+      border-radius: 2px;
+    }
+
+    /* MVV Grid */
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 50px;
+      margin-top: 80px;
+    }
+
+    /* MVV Card */
+    .mvv-card {
+      position: relative;
+      padding: 50px;
+      border-radius: 24px;
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(79, 200, 116, 0.2);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .mvv-card:nth-child(1) {
+      animation: slideUp 0.6s ease-out 0.1s forwards;
+    }
+
+    .mvv-card:nth-child(2) {
+      animation: slideUp 0.6s ease-out 0.2s forwards;
+    }
+
+    .mvv-card:nth-child(3) {
+      animation: slideUp 0.6s ease-out 0.3s forwards;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .mvv-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #4fc874, #82d89d, transparent);
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+    }
+
+    .mvv-card:hover::before {
+      transform: translateX(0);
+    }
+
+    .mvv-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 150px;
+      height: 150px;
+      background: radial-gradient(circle, rgba(79, 200, 116, 0.1), transparent);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .mvv-card:hover {
+      transform: translateY(-20px);
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(79, 200, 116, 0.4);
+      box-shadow: 0 30px 60px rgba(79, 200, 116, 0.2);
+    }
+
+    /* Card Content */
+    .mvv-card-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .mvv-icon-wrapper {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, rgba(79, 200, 116, 0.2), rgba(130, 216, 157, 0.1));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      border: 1px solid rgba(79, 200, 116, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .mvv-icon {
+      font-size: 2.2rem;
+      color: #4fc874;
+    }
+
+    .mvv-card:hover .mvv-icon-wrapper {
+      transform: scale(1.1) rotate(5deg);
+      background: linear-gradient(135deg, rgba(79, 200, 116, 0.3), rgba(130, 216, 157, 0.2));
+      border-color: rgba(79, 200, 116, 0.5);
+    }
+
+    .mvv-card h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .mvv-card p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #d9eedd;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    /* List Items */
+    .mvv-list {
+      list-style: none;
+      margin: 0;
+    }
+
+    .mvv-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      color: #c7f0d8;
+      font-weight: 500;
+    }
+
+    .mvv-list li::before {
+      content: '✓';
+      color: #4fc874;
+      font-weight: 800;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: rgba(79, 200, 116, 0.2);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .mvv-card:hover .mvv-list li::before {
+      background: rgba(79, 200, 116, 0.4);
+      transform: scale(1.15);
+    }
+
+    /* Accent Line */
+    .mvv-accent {
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, #4fc874, transparent);
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .mvv-card:hover .mvv-accent {
+      opacity: 1;
+    }
+
+    /* Feature Highlight Section */
+    .mvv-highlights {
+      margin-top: 120px;
+      padding: 60px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(79, 200, 116, 0.15);
+      border-radius: 24px;
+      backdrop-filter: blur(20px);
+    }
+
+    .mvv-highlights h3 {
+      font-size: 1.8rem;
+      color: #ffffff;
+      margin-bottom: 40px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .highlight-box {
+      padding: 30px;
+      background: rgba(79, 200, 116, 0.08);
+      border-radius: 16px;
+      border: 1px solid rgba(79, 200, 116, 0.2);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .highlight-box:hover {
+      transform: translateY(-10px);
+      background: rgba(79, 200, 116, 0.12);
+      border-color: rgba(79, 200, 116, 0.4);
+      box-shadow: 0 15px 40px rgba(79, 200, 116, 0.2);
+    }
+
+    .highlight-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #4fc874;
+      margin-bottom: 10px;
+    }
+
+    .highlight-text {
+      font-size: 0.95rem;
+      color: #c7f0d8;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    /* Impact Statement */
+    .mvv-impact {
+      margin-top: 100px;
+      padding: 60px;
+      background: linear-gradient(135deg, rgba(79, 200, 116, 0.15), rgba(130, 216, 157, 0.08));
+      border-radius: 24px;
+      border: 1px solid rgba(79, 200, 116, 0.3);
+      text-align: center;
+    }
+
+    .mvv-impact h3 {
+      font-size: 1.8rem;
+      color: #4fc874;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .mvv-impact p {
+      font-size: 1.2rem;
+      color: #d9eedd;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* CTA Section */
+    .mvv-cta {
+      margin-top: 80px;
+      text-align: center;
+    }
+
+    .mvv-cta h3 {
+      font-size: 1.8rem;
+      color: #ffffff;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .mvv-cta p {
+      font-size: 1.05rem;
+      color: #a4f8c7;
+      margin-bottom: 30px;
+    }
+
+    .mvv-btn {
+      display: inline-block;
+      padding: 16px 45px;
+      background: linear-gradient(135deg, #4fc874, #3cb265);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 15px 40px rgba(79, 200, 116, 0.3);
+      border: 2px solid transparent;
+    }
+
+    .mvv-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 25px 60px rgba(79, 200, 116, 0.4);
+      background: linear-gradient(135deg, #3cb265, #2a8854);
+    }
+
+    /* SVG Icon Styles */
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ==================== RESPONSIVE DESIGN ==================== */
+    @media (max-width: 1024px) {
+      .mvv-header h1 {
+        font-size: 3rem;
+      }
+
+      .mvv-grid {
+        gap: 40px;
+      }
+
+      .mvv-card {
+        padding: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mvv-section {
+        padding: 80px 5%;
+      }
+
+      .mvv-header h1 {
+        font-size: 2.2rem;
+      }
+
+      .mvv-header p {
+        font-size: 1rem;
+      }
+
+      .mvv-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .mvv-card {
+        padding: 30px;
+      }
+
+      .mvv-card h3 {
+        font-size: 1.6rem;
+      }
+
+      .mvv-card p {
+        font-size: 0.95rem;
+      }
+
+      .mvv-icon-wrapper {
+        width: 70px;
+        height: 70px;
+      }
+
+      .mvv-icon {
+        font-size: 1.8rem;
+      }
+
+      .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .mvv-highlights {
+        padding: 40px;
+      }
+
+      .mvv-highlights h3 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+      }
+
+      .highlight-box {
+        padding: 20px;
+      }
+
+      .highlight-number {
+        font-size: 2rem;
+      }
+
+      .mvv-impact {
+        padding: 40px;
+      }
+
+      .mvv-impact h3 {
+        font-size: 1.5rem;
+      }
+
+      .mvv-impact p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .mvv-section {
+        padding: 60px 5%;
+        min-height: auto;
+      }
+
+      .mvv-header h1 {
+        font-size: 1.6rem;
+      }
+
+      .mvv-header p {
+        font-size: 0.95rem;
+      }
+
+      .mvv-header {
+        margin-bottom: 60px;
+      }
+
+      .mvv-card {
+        padding: 20px;
+      }
+
+      .mvv-card h3 {
+        font-size: 1.3rem;
+      }
+
+      .mvv-card p {
+        font-size: 0.9rem;
+      }
+
+      .mvv-list li {
+        font-size: 0.9rem;
+        gap: 10px;
+      }
+
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mvv-highlights,
+      .mvv-impact {
+        padding: 25px;
+      }
+
+      .mvv-cta h3 {
+        font-size: 1.4rem;
+      }
+
+      .mvv-btn {
+        padding: 12px 35px;
+        font-size: 0.9rem;
+      }
+    }
 
 .success-score-section {
   background: radial-gradient(ellipse at top left, #e7f8ec 0%, #ffffff 100%);
@@ -1003,90 +1500,438 @@ a {
       }
     }
 
-.testimonial-section {
-  background: linear-gradient(to bottom right, #f4ffec, #ffffff);
-  padding: 100px 5%;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  text-align: center;
-}
+ .testimonial-section {
+      background: linear-gradient(135deg, #f4ffec 0%, #e8f9f1 50%, #f4ffec 100%);
+      padding: 120px 5%;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-.testimonial-header h2 {
-  font-size: 2.5rem;
-  color: #1b382b;
-  font-weight: 800;
-}
+    /* Background Decorations */
+    .testimonial-bg-decoration {
+      position: absolute;
+      opacity: 0.05;
+      pointer-events: none;
+    }
 
-.testimonial-header p {
-  font-size: 1.1rem;
-  color: #2c4439;
-  margin-top: 10px;
-  max-width: 600px;
-  margin: auto;
-}
+    .decoration-1 {
+      width: 400px;
+      height: 400px;
+      background: #4fc874;
+      border-radius: 50%;
+      top: -100px;
+      right: -100px;
+      animation: float 15s ease-in-out infinite;
+    }
 
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-  margin-top: 60px;
-}
+    .decoration-2 {
+      width: 300px;
+      height: 300px;
+      background: #4fc874;
+      border-radius: 50%;
+      bottom: -50px;
+      left: -50px;
+      animation: float 18s ease-in-out infinite reverse;
+    }
 
-.testimonial-card {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  text-align: left;
-  position: relative;
-  transition: all 0.3s ease;
-  border: 1px solid #d9eedd;
-}
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(30px); }
+    }
 
-.testimonial-card:hover {
-  transform: translateY(-8px);
-  background-color: #f6fff7;
-  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.08);
-}
+    .testimonial-header {
+      text-align: center;
+      margin-bottom: 100px;
+      position: relative;
+      z-index: 1;
+    }
 
-.quote-icon {
-  font-size: 3rem;
-  color: #4fc874;
-  margin-bottom: 10px;
-}
+    .testimonial-header h2 {
+      font-size: 3.2rem;
+      color: #1b382b;
+      font-weight: 800;
+      margin-bottom: 15px;
+      letter-spacing: -0.5px;
+    }
 
-.testimonial-card .quote {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #2c4439;
-  margin-bottom: 25px;
-  font-style: italic;
-}
+    .testimonial-header .subtitle {
+      font-size: 1.2rem;
+      color: #4b6156;
+      font-weight: 500;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
 
-.client-info {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+    /* Stats Bar */
+    .testimonial-stats {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
 
-.client-info img {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #4fc874;
-}
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.client-info h4 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #1b382b;
-  margin-bottom: 2px;
-}
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #4fc874;
+    }
 
-.client-info span {
-  font-size: 0.9rem;
-  color: #4fc874;
-}
+    .stat-label {
+      font-size: 0.85rem;
+      color: #2c4439;
+      font-weight: 600;
+      margin-top: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Testimonials Grid */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 35px;
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Testimonial Card */
+    .testimonial-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f9fffd 100%);
+      padding: 40px;
+      border-radius: 24px;
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid rgba(79, 200, 116, 0.1);
+      box-shadow: 0 10px 40px rgba(27, 56, 43, 0.06);
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: slideUp 0.6s ease-out forwards;
+    }
+
+    .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+    .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+    .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+    .testimonial-card:nth-child(4) { animation-delay: 0.4s; }
+    .testimonial-card:nth-child(5) { animation-delay: 0.5s; }
+    .testimonial-card:nth-child(6) { animation-delay: 0.6s; }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Card Hover Effect */
+    .testimonial-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 30px 60px rgba(27, 56, 43, 0.12);
+      background: linear-gradient(135deg, #ffffff 0%, #f4fff8 100%);
+      border-color: rgba(79, 200, 116, 0.2);
+    }
+
+    /* Card Background Accent */
+    .testimonial-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(79, 200, 116, 0.08), transparent);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .testimonial-card-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Rating Stars */
+    .testimonial-rating {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .star {
+      color: #ffc107;
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial-card:hover .star {
+      transform: scale(1.1);
+    }
+
+    /* Quote Text */
+    .testimonial-quote {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #2b4a3c;
+      margin-bottom: 30px;
+      font-weight: 500;
+      font-style: italic;
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .testimonial-quote::before {
+      content: '"';
+      position: absolute;
+      left: 0;
+      top: -10px;
+      font-size: 3rem;
+      color: #4fc874;
+      opacity: 0.3;
+      font-weight: 900;
+    }
+
+    /* Client Info */
+    .client-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(79, 200, 116, 0.1);
+    }
+
+    .client-avatar {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4fc874, #2f9e5f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.4rem;
+      box-shadow: 0 8px 20px rgba(79, 200, 116, 0.3);
+      flex-shrink: 0;
+    }
+
+    .client-details h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1b382b;
+      margin-bottom: 3px;
+    }
+
+    .client-details p {
+      font-size: 0.85rem;
+      color: #4fc874;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Badge */
+    .testimonial-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, #4fc874, #3cb265);
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(79, 200, 116, 0.3);
+    }
+
+    /* Carousel Dots (Optional for future implementation) */
+    .testimonial-dots {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(79, 200, 116, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .dot.active {
+      background: #4fc874;
+      transform: scale(1.3);
+      box-shadow: 0 0 15px rgba(79, 200, 116, 0.5);
+    }
+
+    .dot:hover {
+      background: rgba(79, 200, 116, 0.6);
+    }
+
+    /* CTA After Testimonials */
+    .testimonial-cta {
+      margin-top: 80px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-cta h3 {
+      font-size: 1.8rem;
+      color: #1b382b;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .testimonial-cta p {
+      font-size: 1rem;
+      color: #2c4439;
+      margin-bottom: 25px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 14px 40px;
+      background: linear-gradient(135deg, #4fc874, #3cb265);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 15px 35px rgba(79, 200, 116, 0.3);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 25px 50px rgba(79, 200, 116, 0.4);
+    }
+
+    /* ==================== RESPONSIVE DESIGN ==================== */
+    @media (max-width: 1024px) {
+      .testimonial-header h2 {
+        font-size: 2.5rem;
+      }
+
+      .testimonial-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .testimonial-card {
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-section {
+        padding: 80px 5%;
+      }
+
+      .testimonial-header h2 {
+        font-size: 2rem;
+      }
+
+      .testimonial-header .subtitle {
+        font-size: 1rem;
+      }
+
+      .testimonial-stats {
+        gap: 30px;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+      }
+
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .testimonial-card {
+        padding: 25px;
+      }
+
+      .testimonial-quote {
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .client-info {
+        flex-direction: column;
+        text-align: center;
+        border-top: none;
+        padding-top: 0;
+      }
+
+      .client-avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+      }
+
+      .testimonial-cta h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .testimonial-section {
+        padding: 60px 5%;
+      }
+
+      .testimonial-header h2 {
+        font-size: 1.6rem;
+      }
+
+      .testimonial-stats {
+        gap: 20px;
+      }
+
+      .testimonial-grid {
+        gap: 20px;
+      }
+
+      .testimonial-card {
+        padding: 20px;
+      }
+
+      .testimonial-badge {
+        top: 15px;
+        right: 15px;
+        font-size: 0.7rem;
+        padding: 6px 12px;
+      }
+
+      .cta-button {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+      }
+    }
 
 /* Scroll animation */
 .animated {
