@@ -24,6 +24,8 @@ function showSlide(index) {
   }, 500);
 }
 
+
+
 showSlide(currentSlide);
 
 setInterval(() => {
