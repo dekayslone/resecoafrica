@@ -1577,7 +1577,29 @@ a {
   box-shadow: 0 8px 20px rgba(79, 200, 116, 0.3);
 }
 
-
+/* Quick View Button */
+.quick-view-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(79, 200, 116, 0.5);
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1b382b;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
 
 .property-card-enhanced:hover .quick-view-btn {
   transform: translate(-50%, -50%) scale(1);
