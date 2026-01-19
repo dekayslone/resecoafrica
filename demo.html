@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Property Section - Demo | Reseco Africa</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Base Styles (minimal) -->
+  <style>
+    :root {
+      --dark-green: #19362e;
+      --mid-green: #2c4439;
+      --light-green: #4fc874;
+      --off-white: #f4ffec;
+      --white: #ffffff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #1b382b;
+      line-height: 1.6;
+      background: #ffffff;
+    }
+
+    /* Simple Header for Demo */
+    .demo-header {
+      padding: 20px 5%;
+      background: linear-gradient(135deg, #1b382b, #2c4439);
+      color: white;
+      text-align: center;
+    }
+
+    .demo-header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .demo-header p {
+      font-size: 1rem;
+      color: #a4f8c7;
+    }
+
+    /* Demo Banner */
+    .demo-banner {
+      background: linear-gradient(135deg, #4fc874, #3cb265);
+      padding: 16px 5%;
+      text-align: center;
+      color: white;
+      font-weight: 600;
+    }
+
+    /* Simple Footer for Demo */
+    .demo-footer {
+      padding: 40px 5%;
+      background: #1b382b;
+      color: #a4f8c7;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .demo-footer p {
+      margin-bottom: 10px;
+    }
+
+    .demo-footer a {
+      color: #4fc874;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+
+  <!-- Enhanced Property Section CSS -->
+  <link rel="stylesheet" href="property-section-enhanced.css">
+</head>
+<body>
+
+  <!-- Demo Header -->
+  <header class="demo-header">
+    <h1>🏡 Enhanced Property Section Demo</h1>
+    <p>World-class design for Reseco Africa</p>
+  </header>
+
+  <!-- Demo Banner -->
+  <div class="demo-banner">
+    ✨ Scroll down to see the enhanced property section with smooth animations and interactions
+  </div>
+
+  <!-- ENHANCED PROPERTY SECTION STARTS HERE -->
+  <section class="property-section-enhanced">
+    <!-- Animated Background Elements -->
+    <div class="property-bg-elements">
+      <div class="bg-shape shape-1"></div>
+      <div class="bg-shape shape-2"></div>
+      <div class="bg-shape shape-3"></div>
+    </div>
+
+    <div class="property-container">
+      <!-- Enhanced Header with Animated Elements -->
+      <div class="property-header-enhanced">
+        <div class="header-badge">
+          <span class="badge-icon">🏡</span>
+          <span>Premium Real Estate</span>
+        </div>
+        <h2 class="property-main-title">
+          Discover Your Dream Property
+        </h2>
+        <p class="property-subtitle">
+          Exceptional estates crafted for modern living, strategic investment, and building generational wealth across Africa
+        </p>
+        
+        <!-- Filter/Category Pills -->
+        <div class="property-filters">
+          <button class="filter-pill active" data-filter="all">
+            <span>All Properties</span>
+            <span class="pill-count">3</span>
+          </button>
+          <button class="filter-pill" data-filter="featured">
+            <span>Featured</span>
+            <span class="pill-count">1</span>
+          </button>
+          <button class="filter-pill" data-filter="premium">
+            <span>Premium</span>
+            <span class="pill-count">2</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Enhanced Property Grid -->
+      <div class="property-grid-enhanced">
+        
+        <!-- Property Card 1 - Ubuntu City Estate -->
+        <div class="property-card-enhanced featured" data-aos="fade-up" data-aos-delay="100">
+          <!-- Image Container with Parallax -->
+          <div class="property-image-container">
+            <div class="property-overlay-gradient"></div>
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80" 
+                 alt="Ubuntu City Estate" 
+                 class="property-image-enhanced"
+                 loading="lazy">
+            
+            <!-- Status Badge -->
+            <div class="property-status-badge featured-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" 
+                      fill="currentColor"/>
+              </svg>
+              Featured Estate
+            </div>
+
+            <!-- Quick View Button -->
+            <button class="quick-view-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="2"/>
+                <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" 
+                      stroke="currentColor" stroke-width="2"/>
+              </svg>
+              Quick View
+            </button>
+          </div>
+
+          <!-- Content Section -->
+          <div class="property-content-enhanced">
+            <!-- Top Section -->
+            <div class="property-top-info">
+              <h3 class="property-title-enhanced">Ubuntu City Estate</h3>
+              <div class="property-location-enhanced">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" 
+                        fill="currentColor"/>
+                </svg>
+                <span>Paiko, Gwagwalada, Abuja</span>
+              </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="property-features-grid">
+              <div class="feature-item-enhanced">
+                <div class="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                    <path d="M9 3v18M15 3v18M3 9h18M3 15h18" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div class="feature-content">
+                  <span class="feature-value-enhanced">500m²</span>
+                  <span class="feature-label-enhanced">Plot Size</span>
+                </div>
+              </div>
+
+              <div class="feature-item-enhanced">
+                <div class="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" fill="none"/>
+                  </svg>
+                </div>
+                <div class="feature-content">
+                  <span class="feature-value-enhanced">24/7</span>
+                  <span class="feature-label-enhanced">Security</span>
+                </div>
+              </div>
+
+              <div class="feature-item-enhanced">
+                <div class="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" fill="none"/>
+                  </svg>
+                </div>
+                <div class="feature-content">
+                  <span class="feature-value-enhanced">Eco</span>
+                  <span class="feature-label-enhanced">Friendly</span>
+                </div>
+              </div>
+
+              <div class="feature-item-enhanced">
+                <div class="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="2" fill="none"/>
+                  </svg>
+                </div>
+                <div class="feature-content">
+                  <span class="feature-value-enhanced">C of O</span>
+                  <span class="feature-label-enhanced">Title Ready</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Amenities Tags -->
+            <div class="amenities-tags">
+              <span class="amenity-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 11l3 3L22 4"/>
+                </svg>
+                Electricity
+              </span>
+              <span class="amenity-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 11l3 3L22 4"/>
+                </svg>
+                Water Supply
+              </span>
+              <span class="amenity-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 11l3 3L22 4"/>
+                </svg>
+                Good Roads
+              </span>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="property-footer">
+              <div class="property-price-section">
+                <span class="price-label">Starting from</span>
+                <span class="property-price">₦2.5M</span>
+              </div>
+              <div class="property-actions-enhanced">
+                <a href="#" class="btn-enhanced btn-primary-enhanced">
+                  <span>View Details</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </a>
+                <a href="#" class="btn-enhanced btn-secondary-enhanced" title="Contact Us">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property Card 2 - Mandela Park Estate -->
+        <div class="property-card-enhanced premium" data-aos="fade-up" data-aos-delay="200">
+          <div class="property-image-container">
+            <div class="property-overlay-gradient"></div>
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&q=80" 
+                 alt="Mandela Park Estate" 
+                 class="property-image-enhanced"
+                 loading="lazy">
+            
+            <div class="property-status-badge premium-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2"/>
+                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              Premium Location
+            </div>
+
+            <button class="quick-view-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="2"/>
+                <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" 
+                      stroke="currentColor" stroke-width="2"/>
+              </svg>
+              Quick View
+            </button>
+          </div>
+
+          <div class="property-content-enhanced">
+            <div class="property-top-info">
+              <h3 class="property-title-enhanced">Mandela Park Estate</h3>
+              <div class="property-location-enhanced">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" 
+                        fill="currentColor"/>
+                </svg>
+                <span>Kuje, Abuja</span>
+              </div>
+            </div>
+
+            <div class="property-features-grid">
+              <div class="feature-item-enhanced">
+                <div class="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                    <path d="M9 3v18M15 3v18M3 9h18M3 15h18" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div class="feature-content">
+                  <span class="feature-value-enhanced">600m²</span>
+                  <span class="feature-label-enhanced">Plot Size</span>
+                </div>
+              </div>
+
+              <div class="feature-item-enhanced">
+                <div class="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="2" fill="none"/>
+                  </svg>
+                </div>
+                <div class="feature-content">
+                  <span class="feature-value-enhanced">C of O</span>
+                  <span class="feature-label-enhanced">Title Docs</span>
+                </div>
+              </div>
+
+              <div class="feature-item-enhanced">
+                <div class="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div class="feature-content">
+                  <span class="feature-value-enhanced">6 Months</span>
+                  <span class="feature-label-enhanced">Payment Plan</span>
+                </div>
+              </div>
+
+              <div class="feature-item-enhanced">
+                <div class="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" fill="none"/>
+                  </svg>
+                </div>
+                <div class="feature-content">
+                  <span class="feature-value-enhanced">24/7</span>
+                  <span class="feature-label-enhanced">Security</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="amenities-tags">
+              <span class="amenity-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 11l3 3L22 4"/>
+                </svg>
+                Drainage System
+              </span>
+              <span class="amenity-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 11l3 3L22 4"/>
+                </svg>
+                Perimeter Fence
+              </span>
+              <span class="amenity-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 11l3 3L22 4"/>
+                </svg>
+                Recreation Area
+              </span>
+            </div>
+
+            <div class="property-footer">
+              <div class="property-price-section">
+                <span class="price-label">Starting from</span>
+                <span class="property-price">₦3.2M</span>
+              </div>
+              <div class="property-actions-enhanced">
+                <a href="#" class="btn-enhanced btn-primary-enhanced">
+                  <span>View Details</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </a>
+                <a href="#" class="btn-enhanced btn-secondary-enhanced" title="Contact Us">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property Card 3 - Emerald Estate -->
+        <div class="property-card-enhanced premium" data-aos="fade-up" data-aos-delay="300">
+          <div class="property-image-container">
+            <div class="property-overlay-gradient"></div>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80" 
+                 alt="Emerald Estate" 
+                 class="property-image-enhanced"
+                 loading="lazy">
+            
+            <div class="property-status-badge premium-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2"/>
+                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              Premium Location
+            </div>
+
+            <button class="quick-view-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="2"/>
+                <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" 
+                      stroke="currentColor" stroke-width="2"/>
+              </svg>
+              Quick View
+            </button>
+          </div>
+
+          <div class="property-content-enhanced">
+            <div class="property-top-info">
+              <h3 class="property-title-enhanced">Emerald Estate</h3>
+              <div class="property-location-enhanced">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" 
+                        fill="currentColor"/>
+                </svg>
+                <span>Gwagwalada, Abuja</span>
+              </div>
+            </div>
+
+            <div class="property-features-grid">
+              <div class="feature-item-enhanced">
+                <div class="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                    <path d="M9 3v18M15 3v18M3 9h18M3 15h18" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div class="feature-content">
+                  <span class="feature-value-enhanced">600m²</span>
+                  <span class="feature-label-enhanced">Plot Size</span>
+                </div>
+              </div>
+
+              <div class="feature-item-enhanced">
+                <div class="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="2" fill="none"/>
+                  </svg>
+                </div>
+                <div class="feature-content">
+                  <span class="feature-value-enhanced">C of O</span>
+                  <span class="feature-label-enhanced">Title Docs</span>
+                </div>
+              </div>
+
+              <div class="feature-item-enhanced">
+                <div class="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M9 22V12h6v10" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div class="feature-content">
+                  <span class="feature-value-enhanced">Modern</span>
+                  <span class="feature-label-enhanced">Infrastructure</span>
+                </div>
+              </div>
+
+              <div class="feature-item-enhanced">
+                <div class="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div class="feature-content">
+                  <span class="feature-value-enhanced">Flexible</span>
+                  <span class="feature-label-enhanced">Payment</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="amenities-tags">
+              <span class="amenity-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 11l3 3L22 4"/>
+                </svg>
+                Street Lights
+              </span>
+              <span class="amenity-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 11l3 3L22 4"/>
+                </svg>
+                Green Spaces
+              </span>
+              <span class="amenity-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 11l3 3L22 4"/>
+                </svg>
+                Gated Community
+              </span>
+            </div>
+
+            <div class="property-footer">
+              <div class="property-price-section">
+                <span class="price-label">Starting from</span>
+                <span class="property-price">₦2.8M</span>
+              </div>
+              <div class="property-actions-enhanced">
+                <a href="#" class="btn-enhanced btn-primary-enhanced">
+                  <span>View Details</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </a>
+                <a href="#" class="btn-enhanced btn-secondary-enhanced" title="Contact Us">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Enhanced CTA Section -->
+      <div class="property-cta-section">
+        <div class="cta-content-wrapper">
+          <div class="cta-icon-wrapper">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="2"/>
+              <path d="M9 22V12h6v10" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Looking for Something Specific?</h3>
+          <p>Can't find the perfect property? Our team is here to help you discover exclusive opportunities tailored to your needs.</p>
+          <div class="cta-actions">
+            <a href="#" class="cta-btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span>Talk to Our Team</span>
+            </a>
+            <a href="#" class="cta-btn-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span>Browse All Properties</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ENHANCED PROPERTY SECTION ENDS HERE -->
+
+  <!-- Demo Footer -->
+  <footer class="demo-footer">
+    <p><strong>Enhanced Property Section Demo</strong></p>
+    <p>Created for <a href="https://resecoafrica.com">Reseco Africa</a></p>
+    <p>© 2026 All Rights Reserved</p>
+  </footer>
+
+  <!-- Enhanced Property Section JavaScript -->
+  <script src="property-section-enhanced.js"></script>
+
+</body>
+</html>
