@@ -311,9 +311,32 @@ section {
   text-decoration: none;
 }
 
-.btn-dark-outline:hover {
+..btn-dark-outline:hover {
   background: var(--forest);
   color: #fff;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+  text-decoration: none;
+  text-align: center;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+}
+
+.cta-btn:focus-visible {
+  outline: 3px solid rgba(80, 200, 120, 0.35);
+  outline-offset: 3px;
 }
 
 /* ============================
@@ -1439,7 +1462,7 @@ footer a:hover {
     <a href="#estates">Estates</a>
     <a href="#proof">Why Us</a>
     <a href="#faq">FAQ</a>
-    <a href="#cta" class="nav-cta">Inquire Now</a>
+    <a href="#cta" class="nav-cta cta-btn">Inquire Now</a>
   </div>
 </nav>
 
@@ -1459,8 +1482,8 @@ footer a:hover {
     </p>
 
     <div class="hero-ctas">
-      <a href="#estates" class="btn-primary">Explore Our Estates</a>
-      <a href="#cta" class="btn-outline">Claim your Spot!!!</a>
+      <a href="#estates" class="btn-primary cta-btn">Explore Our Estates</a>
+      <a href="#cta" class="btn-outline cta-btn">Claim your Spot!!!</a>
     </div>
 
     <div class="hero-stats">
@@ -1706,7 +1729,7 @@ footer a:hover {
           <span>Units are selling fast</span>
         </div>
         <!-- REPLACE href with your actual lead form, WhatsApp link, or CRM link -->
-        <a href="#cta" class="btn-primary" style="width:100%;text-align:center;">Claim Your Plot →</a>
+        <a href="#cta" class="btn-primary cta-btn" style="width:100%;text-align:center;">Claim Your Plot →</a>
       </div>
 
     </div>
@@ -1908,7 +1931,7 @@ Once current slots are gone, the price moves to ₦14M.</p>
       <input type="hidden" name="_subject" value="New lead from Reseco Africa landing page">
       <input type="hidden" name="_template" value="table">
       <div class="form-actions">
-        <button type="submit" class="form-submit">Claim your Plot</button>
+        <button type="submit" class="form-submit cta-btn">Claim your Plot</button>
         <p class="form-note">We respect your privacy. Your information is safe and will never be shared.</p>
       </div>
     </form>
@@ -1916,11 +1939,11 @@ Once current slots are gone, the price moves to ₦14M.</p>
 
   <div class="final-cta-buttons">
     <!-- REPLACE: Update WhatsApp number (remove leading +, replace 2348000000000 with real number) -->
-    <a href="https://wa.me/2349046904532?text=I'm%20interested%20in%20Reseco%20Africa%20estates" class="btn-dark">
+    <a href="https://wa.me/2349046904532?text=I'm%20interested%20in%20Reseco%20Africa%20estates" class="btn-dark cta-btn">
       💬 WhatsApp Us Now
     </a>
     <!-- REPLACE: Update phone number -->
-    <a href="tel:+2348065540475" class="btn-dark-outline">
+    <a href="tel:+2348065540475" class="btn-dark-outline cta-btn">
       📞 Call Us Directly
     </a>
   </div>
