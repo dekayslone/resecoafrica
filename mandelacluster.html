@@ -258,7 +258,7 @@ section {
 
 .btn-outline {
   display: inline-block;
-  background: transparent;
+  background: rgba(80, 200, 120, 0.15);
   color: #fff;
   padding: 0.875rem 2rem;
   border: 1.5px solid rgba(255, 255, 255, 0.35);
@@ -267,13 +267,14 @@ section {
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: border-color var(--transition), color var(--transition);
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
   text-decoration: none;
 }
 
 .btn-outline:hover {
+  background: rgba(80, 200, 120, 0.25);
   border-color: var(--gold);
-  color: var(--gold);
+  color: #fff;
 }
 
 .btn-dark {
