@@ -1179,8 +1179,8 @@ section {
 }
 
 .form-submit {
-  background: var(--forest);
-  color: #fff;
+  background: #50C878;
+  color: #003123;
   border: none;
   border-radius: var(--radius-md);
   padding: 1rem 1.75rem;
@@ -1191,13 +1191,13 @@ section {
 }
 
 .form-submit:hover {
-  background: #0a160f;
+  background: #46b66a;
   transform: translateY(-2px);
 }
 
 .form-note {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(0, 49, 35, 0.72);
   line-height: 1.6;
 }
 
@@ -1215,7 +1215,8 @@ section {
    10. FINAL CTA SECTION
    ============================ */
 .final-cta {
-  background: var(--gold);
+  background: #F4FFEC;
+  color: #003123;
   text-align: center;
   padding: 6rem 2rem;
 }
@@ -1223,18 +1224,22 @@ section {
 .final-cta h2 {
   font-family: var(--font-display);
   font-size: clamp(2.1rem, 4.5vw, 3.4rem);
-  color: var(--forest);
+  color: #003123;
   font-weight: 900;
   line-height: 1.15;
   margin-bottom: 1.1rem;
 }
 
 .final-cta p {
-  color: rgba(26, 58, 42, 0.68);
+  color: rgba(0, 49, 35, 0.9);
   font-size: 1.05rem;
   max-width: 540px;
   margin: 0 auto 2.25rem;
   line-height: 1.7;
+}
+
+.final-cta .form-note {
+  color: rgba(0, 49, 35, 0.72);
 }
 
 .final-cta-buttons {
@@ -1244,10 +1249,24 @@ section {
   flex-wrap: wrap;
 }
 
+.final-cta-buttons .btn-dark {
+  background: #50C878;
+  color: #003123;
+}
+
+.final-cta-buttons .btn-dark:hover {
+  background: #46b66a;
+}
+
+.final-cta-buttons .btn-dark-outline {
+  border-color: #003123;
+  color: #003123;
+}
+
 .final-cta-note {
   margin-top: 2rem;
   font-size: 0.82rem;
-  color: rgba(26, 58, 42, 0.45);
+  color: rgba(0, 49, 35, 0.65);
 }
 
 /* ============================
