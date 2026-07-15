@@ -22,38 +22,36 @@
       </a>
 
       <!-- Desktop Navigation -->
-      <ul class="nav-links desktop-only">
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li class="dropdown">
-          <a href="#">Properties <span class="arrow">▼</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="ubuntupage.html">Ubuntu City</a></li>
-            <li><a href="mandela.html">Mandela Park Estate</a></li>
-            <li><a href="ifokanbale.html">Ifokanbale Polo Resort</a></li>
-          </ul>
-        </li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-      </ul>
+      <div class="nav-wrapper desktop-only">
+        <ul class="nav-links">
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li class="dropdown">
+            <a href="#">Properties <span class="arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="ubuntupage.html">Ubuntu City</a></li>
+              <li><a href="mandela.html">Mandela Park Estate</a></li>
+              <li><a href="ifokanbale.html">Ifokanbale Polo Resort</a></li>
+            </ul>
+          </li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
 
-      <!-- Desktop Buttons -->
-      <div class="nav-buttons desktop-only">
-        <a href="joinamb.html" class="btn btn-ambassador">Join Our Ambassadors</a>
-        <a href="contactus.html" class="btn btn-contact">Contact Us</a>
+        <div class="nav-buttons">
+          <a href="joinamb.html" class="btn btn-ambassador">Join Our Ambassadors</a>
+          <a href="contactus.html" class="btn btn-contact">Contact Us</a>
+        </div>
       </div>
 
       <!-- Hamburger for Mobile -->
-      <div class="hamburger" id="hamburger">
+      <button class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
 
       <!-- Mobile Menu -->
       <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-header">
-          <span class="close-menu" id="closeMenu">&times;</span>
-        </div>
         <ul>
           <li><a href="aboutus.html">About Us</a></li>
           <li><a href="service.html">Services</a></li>
@@ -181,20 +179,8 @@
     </div>
   </footer>
 
-  <!-- ========== JS FOR MOBILE MENU ========== -->
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeMenu = document.getElementById('closeMenu');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('open');
-    });
-
-    closeMenu.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-    });
-  </script>
+  <!-- ========== SCRIPTS ========== -->
+  <script src="main.js"></script>
 
 </body>
 </html>
