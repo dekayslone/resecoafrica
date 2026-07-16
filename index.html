@@ -27,8 +27,38 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="loader.css" />
 </head>
 <body>
+
+  <!-- ======================= CUSTOM LOADING SCREEN ======================= -->
+  <div class="loader-overlay" id="loaderOverlay">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <div class="loader-logo-ring"></div>
+        <div class="loader-logo-ring"></div>
+        <div class="loader-logo-ring"></div>
+        <div class="loader-logo-inner">R</div>
+      </div>
+      <div class="loader-text">Loading</div>
+      <div class="loader-dots">
+        <div class="loader-dot"></div>
+        <div class="loader-dot"></div>
+        <div class="loader-dot"></div>
+      </div>
+      <div class="loader-progress">
+        <div class="loader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= SCROLL PROGRESS BAR ======================= -->
+  <div class="scroll-progress">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- ======================= CURSOR GLOW ======================= -->
+  <div class="cursor-glow"></div>
 
   <!-- HERO WRAPPER -->
   <section class="hero-wrapper">
@@ -37,7 +67,7 @@
   </section>
 
   <!-- HEADER / NAV -->
-  <header>
+  <header class="parallax-layer" data-speed="0.2">
     <nav class="navbar">
       <a href="/" class="logo">
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +130,7 @@
   </header>
 
   <!-- INTRO SECTION -->
-  <section class="intro-section">
+  <section class="intro-section" data-reveal data-duration="1">
     <div class="intro-content">
       <h1 class="intro-text">
         <span class="we-are">We are&nbsp;</span>
@@ -117,8 +147,8 @@
         Through every estate we build, we tell the story of Africa's beauty, strength, grit, and boldness. Redefining the future of the continent through real estate.
       </p>
       <div class="nav-buttons2">
-        <a href="joinamb.html" class="btn btn-ambassador">Join Our Ambassadors</a>
-        <a href="contactus.html" class="btn btn-contact2">Contact Us</a>
+        <a href="joinamb.html" class="btn btn-ambassador magnetic-btn">Join Our Ambassadors</a>
+        <a href="contactus.html" class="btn btn-contact2 magnetic-btn">Contact Us</a>
       </div>
     </div>
   </section>
@@ -213,11 +243,11 @@
   </section>
 
   <!-- SUCCESS SCORE -->
-  <section class="success-score-section" id="success-score">
+  <section class="success-score-section" id="success-score" data-reveal data-duration="1.2">
     <div class="success-score-content">
-      <h2 class="success-score-title">Our Success Score</h2>
+      <h2 class="success-score-title split-text">Our Success Score</h2>
       <p class="success-score-subtext">Driven by purpose, powered by results. Here's a glimpse of what we've achieved together.</p>
-      <div class="score-grid">
+      <div class="score-grid stagger-children">
         <div class="score-card animate-on-scroll">
           <img src="assets/icons/propertyicon.svg" alt="Properties" class="score-icon" />
           <h3 class="counter" data-target="400">0</h3>
@@ -264,9 +294,9 @@
         </div>
       </div>
 
-      <div class="property-grid-enhanced">
+      <div class="property-grid-enhanced stagger-children">
         <!-- Card 1: Ubuntu City -->
-        <div class="property-card-enhanced featured">
+        <div class="property-card-enhanced featured glass-effect">
           <div class="property-image-container">
             <div class="property-overlay-gradient"></div>
             <img src="/Ubunu.png" alt="Ubuntu City Estate" class="property-image-enhanced" loading="lazy">
@@ -312,7 +342,7 @@
         </div>
 
         <!-- Card 2: Mandela Park -->
-        <div class="property-card-enhanced premium">
+        <div class="property-card-enhanced premium glass-effect">
           <div class="property-image-container">
             <div class="property-overlay-gradient"></div>
             <img src="/mandela park.png" alt="Mandela Park Estate" class="property-image-enhanced" loading="lazy">
@@ -343,7 +373,7 @@
             <div class="property-footer">
               <div class="property-price-section">
                 <span class="price-label">Starting from</span>
-                <span class="property-price">₦3.2M</span>
+                <span class="property-price">₦3.5M</span>
               </div>
               <div class="property-actions-enhanced">
                 <a href="/mandela.html" class="btn-enhanced btn-primary-enhanced"><span>View Details</span>
@@ -358,7 +388,7 @@
         </div>
 
         <!-- Card 3: Emerald Estate -->
-        <div class="property-card-enhanced premium">
+        <div class="property-card-enhanced premium glass-effect">
           <div class="property-image-container">
             <div class="property-overlay-gradient"></div>
             <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Emerald Estate" class="property-image-enhanced" loading="lazy">
@@ -389,7 +419,7 @@
             <div class="property-footer">
               <div class="property-price-section">
                 <span class="price-label">Starting from</span>
-                <span class="property-price">₦6M</span>
+                <span class="property-price">₦15M</span>
               </div>
               <div class="property-actions-enhanced">
                 <a href="/emerald estate.html" class="btn-enhanced btn-primary-enhanced"><span>View Details</span>
@@ -404,7 +434,7 @@
         </div>
       </div>
 
-      <div class="property-cta-section">
+      <div class="property-cta-section" data-reveal data-duration="1.2">
         <div class="cta-content-wrapper">
           <div class="cta-icon-wrapper">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
@@ -423,7 +453,7 @@
   </section>
 
   <!-- CEO SECTION -->
-  <section class="ceo-section">
+  <section class="ceo-section" data-reveal>
     <div class="ceo-container">
     <div class="ceo-header">
         <h2>Meet Our <span class="ceo-accent">Visionary Leader</span></h2>
@@ -490,8 +520,8 @@
       </div>
     </div>
 
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
+    <div class="testimonial-grid stagger-children">
+      <div class="testimonial-card glass-effect">
         <span class="testimonial-badge">Verified Investor</span>
         <div class="testimonial-card-content">
           <div class="testimonial-rating"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
@@ -499,7 +529,7 @@
           <div class="client-info"><div class="client-avatar">O</div><div class="client-details"><h4>Obasi</h4><p>Real Estate Investor</p></div></div>
         </div>
       </div>
-      <div class="testimonial-card">
+      <div class="testimonial-card glass-effect">
         <span class="testimonial-badge">Young Achiever</span>
         <div class="testimonial-card-content">
           <div class="testimonial-rating"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
@@ -507,7 +537,7 @@
           <div class="client-info"><div class="client-avatar">T</div><div class="client-details"><h4>Tolu</h4><p>First-Time Investor</p></div></div>
         </div>
       </div>
-      <div class="testimonial-card">
+      <div class="testimonial-card glass-effect">
         <span class="testimonial-badge">Tech Professional</span>
         <div class="testimonial-card-content">
           <div class="testimonial-rating"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
@@ -515,7 +545,7 @@
           <div class="client-info"><div class="client-avatar">B</div><div class="client-details"><h4>Bolu</h4><p>Tech Entrepreneur</p></div></div>
         </div>
       </div>
-      <div class="testimonial-card">
+      <div class="testimonial-card glass-effect">
         <span class="testimonial-badge">Special Gift</span>
         <div class="testimonial-card-content">
           <div class="testimonial-rating"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
@@ -523,7 +553,7 @@
           <div class="client-info"><div class="client-avatar">S</div><div class="client-details"><h4>Samuel Eze</h4><p>Family Man</p></div></div>
         </div>
       </div>
-      <div class="testimonial-card">
+      <div class="testimonial-card glass-effect">
         <span class="testimonial-badge">Loyal Client</span>
         <div class="testimonial-card-content">
           <div class="testimonial-rating"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
@@ -531,7 +561,7 @@
           <div class="client-info"><div class="client-avatar">H</div><div class="client-details"><h4>Harrison</h4><p>Property Owner</p></div></div>
         </div>
       </div>
-      <div class="testimonial-card">
+      <div class="testimonial-card glass-effect">
         <span class="testimonial-badge">Family Legacy</span>
         <div class="testimonial-card-content">
           <div class="testimonial-rating"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
@@ -541,36 +571,36 @@
       </div>
     </div>
 
-    <div class="testimonial-cta">
+    <div class="testimonial-cta" data-reveal>
       <h3>Ready to Become Our Next Success Story?</h3>
       <p>Start your journey to financial freedom today with Reseco Africa</p>
-      <a href="contactus.html" class="cta-button">Start Investing Now</a>
+      <a href="contactus.html" class="cta-button magnetic-btn ripple-btn">Start Investing Now</a>
     </div>
   </section>
 
   <!-- AMBASSADORS -->
-  <section class="ambassador-section">
+  <section class="ambassador-section" data-reveal>
     <div class="ambassador-header">
       <h2>Meet Our Ambassadors of the Month</h2>
       <p>Celebrating the standout individuals helping us grow the Reseco Africa vision.</p>
     </div>
-    <div class="ambassador-grid">
-      <div class="ambassador-card animated">
+    <div class="ambassador-grid stagger-children">
+      <div class="ambassador-card animated glass-card">
         <img src="assets/ambassador/ambassador1.png" alt="Toluwani Bilesanmi" loading="lazy">
         <h3>Toluwani Bilesanmi</h3>
         <p class="recognition">Ambassador of the Month</p>
       </div>
-      <div class="ambassador-card animated">
+      <div class="ambassador-card animated glass-card">
         <img src="assets/ambassador/ambassador2.jpg" alt="Ajede Dimphyna Mary" loading="lazy">
         <h3>Ajede Dimphyna Mary</h3>
         <p class="recognition">Ambassador of the Month</p>
       </div>
-      <div class="ambassador-card animated">
+      <div class="ambassador-card animated glass-card">
         <img src="assets/ambassador/ambassador3.jpg" alt="Adeola Oluwaseun" loading="lazy">
         <h3>Adeola Oluwaseun</h3>
         <p class="recognition">Ambassador of the Month</p>
       </div>
-      <div class="ambassador-card animated">
+      <div class="ambassador-card animated glass-card">
         <img src="assets/ambassador/ambassador4.jpg" alt="Blessing A." loading="lazy">
         <h3>Blessing A.</h3>
         <p class="recognition">Ambassador of the Month</p>
@@ -579,7 +609,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="faq-section">
+  <section class="faq-section" data-reveal>
     <div class="faq-header">
       <h2>Frequently Asked Questions</h2>
       <p>Find answers to the most common questions our clients ask.</p>
@@ -620,6 +650,23 @@
     </div>
   </section>
 
+  <!-- FLOATING ACTION BUTTONS -->
+  <div class="floating-actions">
+    <a href="https://wa.me/2349046904532?text=Hello%20Reseco%20Africa%2C%20I%27m%20interested%20in%20your%20properties" target="_blank" class="floating-action-btn whatsapp" aria-label="WhatsApp">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      <span class="tooltip">Chat on WhatsApp</span>
+    </a>
+    <button id="scrollTopBtn" class="floating-action-btn scroll-top" aria-label="Scroll to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"/>
+        <polyline points="5 12 12 5 19 12"/>
+      </svg>
+      <span class="tooltip">Back to Top</span>
+    </button>
+  </div>
+
   <!-- CTA BANNER -->
   <section class="cta-banner">
     <div class="cta-background">
@@ -634,8 +681,8 @@
       <h2>Ready to Build Your Legacy?</h2>
       <p>Join hundreds of satisfied investors who've transformed their financial futures with Reseco Africa. Secure your land, invest in your future.</p>
       <div class="cta-buttons">
-        <a href="/contactus.html" class="cta-btn primary-btn"><span>Purchase Property</span><span>→</span></a>
-        <a href="/joinamb.html" class="cta-btn secondary-btn"><span>Become an Ambassador</span><span>🌟</span></a>
+        <a href="/contactus.html" class="cta-btn primary-btn magnetic-btn ripple-btn"><span>Purchase Property</span><span>→</span></a>
+        <a href="/joinamb.html" class="cta-btn secondary-btn magnetic-btn ripple-btn"><span>Become an Ambassador</span><span>🌟</span></a>
       </div>
       <div class="cta-stats">
         <div class="cta-stat"><span class="cta-stat-number">400+</span><span class="cta-stat-label">Properties Delivered</span></div>
@@ -710,7 +757,12 @@
   </footer>
 
   <!-- Scripts -->
+  <!-- GSAP Animation Library - Load FIRST before other scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  
   <script src="main.js"></script>
+  <script src="animations.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

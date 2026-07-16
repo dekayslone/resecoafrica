@@ -1,0 +1,529 @@
+/* ========================================
+   CUSTOM LOADING SCREEN
+   ======================================== */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0d1f17;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.loader-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-content {
+  text-align: center;
+  position: relative;
+}
+
+/* Animated Logo */
+.loader-logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 30px;
+  position: relative;
+}
+
+.loader-logo-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  animation: loaderSpin 2s linear infinite;
+}
+
+.loader-logo-ring:nth-child(1) {
+  border-top-color: #4fc874;
+  animation-duration: 2s;
+}
+
+.loader-logo-ring:nth-child(2) {
+  inset: 8px;
+  border-right-color: #82d89d;
+  animation-duration: 2.5s;
+  animation-direction: reverse;
+}
+
+.loader-logo-ring:nth-child(3) {
+  inset: 16px;
+  border-bottom-color: #a4f8c7;
+  animation-duration: 3s;
+}
+
+.loader-logo-inner {
+  position: absolute;
+  inset: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4fc874, #2a8854);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 900;
+  font-size: 2.2rem;
+  color: #0d1f17;
+  box-shadow: 0 0 40px rgba(79, 200, 116, 0.3);
+  animation: loaderPulse 2s ease-in-out infinite;
+}
+
+@keyframes loaderSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes loaderPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(79, 200, 116, 0.2); }
+  50% { transform: scale(1.05); box-shadow: 0 0 60px rgba(79, 200, 116, 0.4); }
+}
+
+/* Loading Text */
+.loader-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: rgba(164, 248, 199, 0.7);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  animation: loaderTextFade 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderTextFade {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* Loading Progress Bar */
+.loader-progress {
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.loader-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4fc874, #82d89d, #a4f8c7);
+  border-radius: 2px;
+  animation: loaderProgress 2s ease-in-out forwards;
+}
+
+@keyframes loaderProgress {
+  0% { width: 0%; }
+  50% { width: 60%; }
+  100% { width: 100%; }
+}
+
+/* Loading dots */
+.loader-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.loader-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4fc874;
+  animation: loaderDotBounce 1.4s ease-in-out infinite;
+}
+
+.loader-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loaderDotBounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.3; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* ========================================
+   GLASSMORPHISM UTILITIES
+   ======================================== */
+.glass-light {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background: rgba(13, 31, 23, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(79, 200, 116, 0.12);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(79, 200, 116, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   NEUMORPHISM UTILITIES
+   ======================================== */
+.neumorph-light {
+  background: #f4ffec;
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.06),
+    -8px -8px 16px rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+}
+
+.neumorph-dark {
+  background: #1b382b;
+  box-shadow: 
+    6px 6px 12px rgba(0, 0, 0, 0.3),
+    -6px -6px 12px rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+}
+
+.neumorph-inset {
+  background: #1b382b;
+  box-shadow: 
+    inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+/* ========================================
+   MICRO-INTERACTION UTILITIES
+   ======================================== */
+
+/* Magnetic Button Effect */
+.magnetic-btn {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+}
+
+/* Ripple Effect on click */
+.ripple-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  animation: rippleAnim 0.6s ease-out;
+  pointer-events: none;
+}
+
+@keyframes rippleAnim {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* Smooth scale on hover */
+.hover-scale {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Glow effect on hover */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(79, 200, 116, 0.3);
+}
+
+/* Shimmer effect */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(79, 200, 116, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ========================================
+   GSAP ANIMATION PRESETS
+   ======================================== */
+
+/* Reveal animations */
+.reveal-fade {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.85);
+}
+
+.reveal-rotate {
+  opacity: 0;
+  transform: rotate(-8deg) scale(0.9);
+}
+
+/* Parallax Layers */
+.parallax-layer {
+  will-change: transform;
+}
+
+.parallax-slow {
+  transition: transform 0.1s ease-out;
+}
+
+.parallax-medium {
+  transition: transform 0.05s ease-out;
+}
+
+.parallax-fast {
+  transition: transform 0.02s ease-out;
+}
+
+/* ========================================
+   SCROLL PROGRESS INDICATOR
+   ======================================== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 9998;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4fc874, #82d89d, #a4f8c7);
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 0 0 10px rgba(79, 200, 116, 0.5);
+}
+
+/* ========================================
+   MAGNETIC CURSOR TRAIL
+   ======================================== */
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(79, 200, 116, 0.06), transparent 70%);
+  pointer-events: none;
+  z-index: 9997;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor-glow {
+    display: block;
+  }
+}
+
+/* ========================================
+   GLASSMORPHISM CARDS FOR PROPERTIES
+   ======================================== */
+.property-card-enhanced.glass-effect {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.property-card-enhanced.glass-effect:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(79, 200, 116, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(79, 200, 116, 0.05);
+}
+
+/* ========================================
+   FLOATING ACTION BUTTONS
+   ======================================== */
+.floating-actions {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.floating-action-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.floating-action-btn:hover {
+  transform: scale(1.15);
+}
+
+.floating-action-btn .tooltip {
+  position: absolute;
+  right: 60px;
+  background: rgba(13, 31, 23, 0.95);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.floating-action-btn:hover .tooltip {
+  opacity: 1;
+  right: 65px;
+}
+
+.floating-action-btn.whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+
+.floating-action-btn.scroll-top {
+  background: linear-gradient(135deg, #4fc874, #3cb265);
+  color: #fff;
+}
+
+/* Back to top animation */
+.scroll-top.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-top {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+/* ========================================
+   TESTIMONIAL GLASS CARDS
+   ======================================== */
+.testimonial-card.glass-effect {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.testimonial-card.glass-effect:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(79, 200, 116, 0.15);
+}
+
+/* ========================================
+   COUNTER NUMBER ANIMATION TWEAKS
+   ======================================== */
+.counter {
+  display: inline-block;
+}
+
+/* Stagger animation containers */
+.stagger-children > * {
+  opacity: 0;
+}
+
+/* Split text animation helpers */
+.char {
+  display: inline-block;
+}
+
+/* ========================================
+   MOBILE OPTIMIZATIONS
+   ======================================== */
+@media (max-width: 768px) {
+  .cursor-glow {
+    display: none !important;
+  }
+
+  .floating-actions {
+    bottom: 80px;
+    right: 15px;
+  }
+
+  .floating-action-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+
+  .floating-action-btn .tooltip {
+    display: none;
+  }
+
+  .loader-logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .loader-logo-inner {
+    font-size: 1.6rem;
+  }
+}
