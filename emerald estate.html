@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emerald Estate | Reseco Africa</title>
+  <link rel="stylesheet" href="ubuntu.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="fav.png">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="assets/Logo/Resecoafrica.svg" alt="Reseco Africa Logo" />
+      </a>
+
+      <ul class="nav-links desktop-only">
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li class="dropdown">
+          <a href="index.html">Properties <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="ubuntupage.html">Ubuntu City</a></li>
+            <li><a href="mandela.html">Mandela Park Estate</a></li>
+            <li><a href="emerald estate.html">Emerald Estate</a></li>
+          </ul>
+        </li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="event.html">Events</a></li>
+      </ul>
+
+      <div class="nav-buttons desktop-only">
+        <a href="joinamb.html" class="btn btn-dark">Join Our Ambassadors</a>
+        <a href="contactus.html" class="btn btn-light">Contact Us</a>
+      </div>
+
+      <div class="hamburger mobile-only" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="close-menu" id="closeMenu">&times;</div>
+      <ul>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li class="dropdown">
+          <a href="#">Properties <span class="arrow"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="ubuntupage.html">Ubuntu City</a></li>
+            <li><a href="mandela.html">Mandela Park Estate</a></li>
+            <li><a href="emerald estate.html">Emerald Estate</a></li>
+          </ul>
+        </li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="event.html">Events</a></li>
+      </ul>
+      <div class="mobile-buttons">
+        <a href="joinamb.html" class="btn btn-dark">Join Our Ambassadors</a>
+        <a href="contactus.html" class="btn btn-light">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="property-hero">
+    <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1600&q=80" alt="Emerald Estate" class="hero-video" />
+    <div class="overlay">
+      <div class="hero-text">
+        <h1 id="heroTitle">Emerald Estate</h1>
+        <p>A refined residential destination designed for lifestyle, privacy, and long-term value.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="property-details">
+    <div class="property-details-wrapper">
+      <div class="text-content">
+        <h2>Emerald Estate Overview</h2>
+        <p>
+          Emerald Estate is a premium land development that brings together modern infrastructure, strategic positioning, and a strong sense of community. Built for discerning buyers and long-term investors, it offers a rare opportunity to own in an estate that balances elegance with practicality.
+        </p>
+        <p>
+          Located in a fast-growing corridor, Emerald Estate is designed to support both residential comfort and investment growth. Its secure layout, accessible roads, and thoughtful amenities make it a smart choice for those who want quality living without compromising on future value.
+        </p>
+        <p>
+          With a clear focus on sustainability, security, and an elevated lifestyle, Emerald Estate stands as a standout addition to Reseco Africa’s growing portfolio of landmark properties.
+        </p>
+        <a href="contactus.html" class="cta-btn">Contact Us to Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="estate-features">
+    <div class="container">
+      <h2 class="section-title">Estate Features</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <img src="assets/icons/gate.png" alt="Secure Entry Icon" />
+          <h4>Secure Gated Community</h4>
+        </div>
+        <div class="feature-item">
+          <img src="assets/icons/verified.png" alt="Verified Ownership Icon" />
+          <h4>Verified Ownership Documents</h4>
+        </div>
+        <div class="feature-item">
+          <img src="assets/icons/contamination.png" alt="Drainage System Icon" />
+          <h4>Drainage & Road Infrastructure</h4>
+        </div>
+        <div class="feature-item">
+          <img src="assets/icons/park.png" alt="Green Landscapes Icon" />
+          <h4>Green Open Spaces</h4>
+        </div>
+        <div class="feature-item">
+          <img src="assets/icons/shop.png" alt="Commercial Access Icon" />
+          <h4>Commercial Convenience</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-videos">
+    <div class="about-videos-container">
+      <h2>Why Emerald Estate Stands Out</h2>
+      <p>Designed for modern living and lasting value.</p>
+      <div class="video-thumbnail">
+        <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1200&q=80" alt="Emerald Estate Showcase" class="thumbnail-img" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inspection-form-section">
+    <div class="form-container">
+      <h2>Schedule a Site Inspection</h2>
+      <p>Please fill in your details to request a visit to Emerald Estate.</p>
+      <form id="inspectionForm">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="example@domain.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+234 800 000 0000" required />
+        </div>
+        <div class="form-group">
+          <label for="inspectionDate">Choose Inspection Date</label>
+          <input type="date" id="inspectionDate" name="inspectionDate" required />
+        </div>
+        <div class="form-group">
+          <label for="notes">Additional Notes</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Let us know if you have any requests..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Book Inspection</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="cta-overlay">
+      <div class="cta-content">
+        <h2>Ready to Secure Your Next Opportunity?</h2>
+        <p>Discover Emerald Estate and take the next step toward owning a premium property with lasting value.</p>
+        <div class="cta-buttons">
+          <a href="contactus.html" class="cta-btn primary-btn">Contact Us to Purchase</a>
+          <a href="joinamb.html" class="cta-btn secondary-btn">Join Our Ambassadors</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/Logo/Resecoafrica.svg" alt="Reseco Africa Logo" />
+        <p>Through every estate we build, we tell the story of Africa’s beauty, strength, grit, and boldness.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="event.html">Events</a></li>
+          <li><a href="joinamb.html">Ambassadors</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📞 +234 813 247 8371</p>
+        <p>📧 resecoafricaltd@gmail.com</p>
+        <p>📍 Abuja, Nigeria</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="emerald.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
