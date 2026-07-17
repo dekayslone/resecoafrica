@@ -45,31 +45,7 @@ if (rotatingText) {
 }
 
 // ======================= HAMBURGER MENU =======================
-const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.mobile-menu');
-
-if (hamburger && mobileMenu) {
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
-
-  // Close mobile menu when link is clicked
-  document.querySelectorAll('.mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-    });
-  });
-
-  // Close mobile menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.hamburger') && !e.target.closest('.mobile-menu')) {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-    }
-  });
-}
+// Note: Hamburger menu functionality is now handled by nav.js for better mobile support
 
 // ======================= NAVBAR SCROLL EFFECT =======================
 const header = document.querySelector('header');
