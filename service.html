@@ -9,6 +9,7 @@
   <meta name="author" content="Reseco Africa" />
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="services.css" />
+  <link rel="stylesheet" href="nav-enhancements.css" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -17,57 +18,63 @@
   <!-- ========== HEADER ========== -->
   <header>
     <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="assets/Logo/Resecoafrica.svg" alt="Reseco Africa Logo" />
+      <a href="/" class="logo">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" fill="#4fc874" opacity="0.2"/>
+          <circle cx="20" cy="20" r="14" fill="#4fc874"/>
+          <text x="20" y="24" font-size="16" font-weight="800" fill="#1b382b" text-anchor="middle">R</text>
+        </svg>
       </a>
 
-      <!-- Desktop Navigation -->
       <div class="nav-wrapper desktop-only">
         <ul class="nav-links">
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="service.html">Services</a></li>
+          <li><a href="/aboutus.html">About Us</a></li>
+          <li><a href="/service.html">Services</a></li>
           <li class="dropdown">
-            <a href="#">Properties <span class="arrow">▼</span></a>
+            <a href="#">Properties
+              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
             <ul class="dropdown-menu">
-              <li><a href="ubuntupage.html">Ubuntu City</a></li>
-              <li><a href="mandela.html">Mandela Park Estate</a></li>
-              <li><a href="emerald estate.html">Emerald Estate</a></li>
+              <li><a href="/ubuntupage.html">Ubuntu City Estate</a></li>
+              <li><a href="/mandela.html">Mandela Park Estate</a></li>
+              <li><a href="/emerald%20estate.html">Emerald Estate</a></li>
             </ul>
           </li>
-          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/event.html">Events</a></li>
         </ul>
-
         <div class="nav-buttons">
-          <a href="joinamb.html" class="btn btn-ambassador">Join Our Ambassadors</a>
-          <a href="contactus.html" class="btn btn-contact">Contact Us</a>
+          <a href="/joinamb.html" class="btn btn-ambassador">Join Ambassadors</a>
+          <a href="/contactus.html" class="btn btn-contact">Contact Us</a>
         </div>
       </div>
 
-      <!-- Hamburger for Mobile -->
-      <button class="hamburger" id="hamburger">
+      <button class="hamburger mobile-only" id="hamburger" aria-label="Open menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <!-- Mobile Menu -->
-      <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-label="Mobile menu">
         <ul>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="service.html">Services</a></li>
+          <li><a href="/aboutus.html">About Us</a></li>
+          <li><a href="/service.html">Services</a></li>
           <li class="dropdown">
-            <a href="#">Properties <span class="arrow">▼</span></a>
+            <a href="#">Properties</a>
             <ul class="dropdown-menu">
-              <li><a href="ubuntupage.html">Ubuntu City</a></li>
-              <li><a href="mandela.html">Mandela Park Estate</a></li>
-              <li><a href="emerald estate.html">Emerald Estate</a></li>
+              <li><a href="/ubuntupage.html">Ubuntu City Estate</a></li>
+              <li><a href="/mandela.html">Mandela Park Estate</a></li>
+              <li><a href="/emerald%20estate.html">Emerald Estate</a></li>
             </ul>
           </li>
-          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/event.html">Events</a></li>
         </ul>
         <div class="mobile-buttons">
-          <a href="joinamb.html" class="btn btn-ambassador">Join Our Ambassadors</a>
-          <a href="contactus.html" class="btn btn-contact">Contact Us</a>
+          <a href="/joinamb.html" class="btn btn-ambassador">Join Ambassadors</a>
+          <a href="/contactus.html" class="btn btn-contact">Contact Us</a>
         </div>
       </div>
     </nav>
@@ -181,6 +188,7 @@
 
   <!-- ========== SCRIPTS ========== -->
   <script src="main.js"></script>
+  <script src="nav.js"></script>
 
 </body>
 </html>

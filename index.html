@@ -27,6 +27,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="nav-enhancements.css" />
   <link rel="stylesheet" href="loader.css" />
   <link rel="stylesheet" href="testimonials-enhancements.css" />
   <link rel="stylesheet" href="cta-footer-enhancements.css" />
@@ -665,9 +666,67 @@
     </div>
 
     <div class="testimonial-cta" data-reveal>
-      <h3>Ready to Become Our Next Success Story?</h3>
-      <p>Start your journey to financial freedom today with Reseco Africa</p>
-      <a href="contactus.html" class="cta-button magnetic-btn ripple-btn">Start Investing Now</a>
+      <div class="cta-overlay">
+        <div class="cta-content">
+          <h2>Ready to Become Our Next Success Story?</h2>
+          <p>Start your journey to financial freedom today with Reseco Africa</p>
+
+          <div class="cta-buttons" role="group" aria-label="Call to action buttons">
+            <a href="contactus.html" class="cta-btn primary-btn">Start Investing Now</a>
+            <a href="properties.html" class="cta-btn secondary-btn">View Properties</a>
+          </div>
+
+          <div class="cta-stats" aria-hidden="true">
+            <div class="cta-stat">5 Properties</div>
+            <div class="cta-stat">Trusted by 1,200+ Clients</div>
+          </div>
+        </div>
+
+        <aside class="cta-quick-contact" aria-labelledby="cta-quick-contact-title">
+          <h3 id="cta-quick-contact-title" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Quick contact</h3>
+          <div class="quick-links">
+            <a href="tel:+2348012345678"><span class="icon" aria-hidden="true">📞</span><span>Call Us</span></a>
+            <a href="mailto:resecoafricaltd@gmail.com"><span class="icon" aria-hidden="true">✉️</span><span>Email</span></a>
+            <a href="https://wa.me/2348012345678" target="_blank" rel="noopener"><span class="icon" aria-hidden="true">💬</span><span>WhatsApp</span></a>
+          </div>
+
+          <form id="cta-contact-form" method="POST" action="/contactus.html" class="cta-internal-form" aria-label="Quick contact form">
+            <input type="hidden" name="source" value="cta">
+            <label style="position:absolute;left:-9999px;">Name
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+            <label style="position:absolute;left:-9999px;">Phone
+              <input type="tel" name="phone" placeholder="Phone number" required>
+            </label>
+            <label style="position:absolute;left:-9999px;">Email
+              <input type="email" name="email" placeholder="Email address" required>
+            </label>
+            <button type="submit" class="cta-btn primary-btn">Send</button>
+          </form>
+
+          <div id="cta-thanks" style="display:none;margin-top:10px;color:#eafff0;font-weight:700;">Thanks — we'll contact you shortly!</div>
+        </aside>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function(){
+          var form = document.getElementById('cta-contact-form');
+          if(!form) return;
+          form.addEventListener('submit', function(e){
+            e.preventDefault();
+            var fd = new FormData(form);
+            if(!fd.get('name') || !fd.get('phone') || !fd.get('email')){
+              alert('Please complete name, phone and email');
+              return;
+            }
+            // Attempt to POST to action but keep UX inline.
+            fetch(form.action, { method: 'POST', body: fd }).catch(function(){ /* ignore network errors for static sites */ });
+            form.style.display = 'none';
+            var thanks = document.getElementById('cta-thanks');
+            if(thanks) thanks.style.display = 'block';
+          });
+        });
+      </script>
     </div>
   </section>
 
@@ -885,5 +944,6 @@
     }
   }
   </script>
+  <script src="nav.js"></script>
 </body>
 </html>

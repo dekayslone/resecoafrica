@@ -20,6 +20,8 @@
 
   <!-- ✅ Styles & AOS -->
   <link rel="stylesheet" href="about.css"/>
+  <link rel="stylesheet" href="about-enhancements.css"/>
+  <link rel="stylesheet" href="nav-enhancements.css"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
@@ -27,54 +29,65 @@
   <!-- NAVBAR + HERO -->
   <header>
     <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="assets/Logo/Resecoafrica.svg" alt="Reseco Africa Logo">
+      <a href="/" class="logo">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" fill="#4fc874" opacity="0.2"/>
+          <circle cx="20" cy="20" r="14" fill="#4fc874"/>
+          <text x="20" y="24" font-size="16" font-weight="800" fill="#1b382b" text-anchor="middle">R</text>
+        </svg>
       </a>
 
-      <!-- Desktop Nav -->
-      <ul class="nav-links">
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li class="dropdown">
-          <a href="#" onclick="toggleMobileDropdown(event)">Properties <span class="arrow">▼</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="ubuntupage.html">Ubuntu City</a></li>
-            <li><a href="mandela.html">Mandela Park Estate</a></li>
-            <li><a href="emerald estate.html">Emerald Estate</a></li>
-          </ul>
-        </li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-      </ul>
-
-      <div class="nav-buttons">
-        <a href="joinamb.html" class="btn btn-ambassador">Join Ambassadors</a>
-        <a href="contactus.html" class="btn btn-contact">Contact Us</a>
+      <div class="nav-wrapper desktop-only">
+        <ul class="nav-links">
+          <li><a href="/aboutus.html">About Us</a></li>
+          <li><a href="/service.html">Services</a></li>
+          <li class="dropdown">
+            <a href="#">Properties
+              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/ubuntupage.html">Ubuntu City Estate</a></li>
+              <li><a href="/mandela.html">Mandela Park Estate</a></li>
+              <li><a href="/emerald%20estate.html">Emerald Estate</a></li>
+            </ul>
+          </li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+        </ul>
+        <div class="nav-buttons">
+          <a href="/joinamb.html" class="btn btn-ambassador">Join Ambassadors</a>
+          <a href="/contactus.html" class="btn btn-contact">Contact Us</a>
+        </div>
       </div>
 
-      <!-- Hamburger Icon for Mobile -->
-      <div class="hamburger" id="hamburger">☰</div>
+      <button class="hamburger mobile-only" id="hamburger" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-label="Mobile menu">
+        <ul>
+          <li><a href="/aboutus.html">About Us</a></li>
+          <li><a href="/service.html">Services</a></li>
+          <li class="dropdown">
+            <a href="#">Properties</a>
+            <ul class="dropdown-menu">
+              <li><a href="/ubuntupage.html">Ubuntu City Estate</a></li>
+              <li><a href="/mandela.html">Mandela Park Estate</a></li>
+              <li><a href="/emerald%20estate.html">Emerald Estate</a></li>
+            </ul>
+          </li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/event.html">Events</a></li>
+        </ul>
+        <div class="mobile-buttons">
+          <a href="/joinamb.html" class="btn btn-ambassador">Join Ambassadors</a>
+          <a href="/contactus.html" class="btn btn-contact">Contact Us</a>
+        </div>
+      </div>
     </nav>
-
-    <!-- Mobile Nav Overlay -->
-    <div class="mobile-nav" id="mobileNav">
-      <div class="close-btn" onclick="toggleMobileMenu()">×</div>
-      <ul class="mobile-links">
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li class="dropdown">
-          <a href="#" onclick="toggleMobileDropdown(event)">Properties <span class="arrow">▼</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="ubuntupage.html">Ubuntu City</a></li>
-            <li><a href="mandela.html">Mandela Park Estate</a></li>
-            <li><a href="emerald estate.html">Emerald Estate</a></li>
-          </ul>
-        </li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-      </ul>
-      <div class="mobile-buttons">
-        <a href="joinamb.html" class="btn btn-ambassador">Our Ambassadors</a>
-        <a href="contactus.html" class="btn btn-contact">Contact Us</a>
-      </div>
     </div>
 
     <!-- HERO -->
@@ -86,61 +99,107 @@
     </section>
   </header>
 
-  <!-- WHO WE ARE -->
-  <section class="about-overview" data-aos="fade-right">
-    <div class="about-overview-container">
-      <div class="about-text">
-        <h2>Who We Are</h2>
-        <p>Reseco Africa is a visionary company reshaping the landscape of real estate and enterprise across the continent. We are not just developers, we are builders of experiences, architects of opportunity, and pioneers of a new African narrative. From luxurious properties to transformative events and innovative solutions, everything we create is rooted in excellence, purpose, and impact. Our mission is bold: to raise standards, empower communities, and position Africa as a global force. At Reseco, we don’t follow trends, we set them. We don’t wait for the future, we build it. This is who we are. This is Reseco Africa.</p>
-      </div>
-      <div class="about-image">
-        <img src="assets/city4.jpg" alt="Reseco Team">
-      </div>
-    </div>
-  </section>
+  <!-- REDESIGNED ABOUT CONTENT -->
+  <main class="about-container">
+    <!-- Hero / Mission split -->
+    <section class="split-hero" aria-labelledby="about-hero-title">
+      <div class="intro">
+        <h1 id="about-hero-title">Building opportunity, community, and legacy</h1>
+        <p class="lead">Reseco Africa designs and delivers sustainable real estate that empowers families, investors, and communities across the continent. We combine local insight, modern design, and transparent operations to make property ownership accessible, profitable and proud.</p>
 
-  <!-- WHAT SETS US APART -->
-  <section class="about-values" data-aos="fade-left">
-    <div class="about-values-container">
-      <div class="values-image">
-        <img src="assets/city5.jpg" alt="Reseco Difference">
-      </div>
-      <div class="values-text">
-        <h2>What Sets Us Apart</h2>
-        <p>At Reseco Africa, every estate we build tells a deeper story, one of Africa’s beauty, strength, and bold spirit. We don’t just develop land; we shape legacies, create communities, and celebrate culture. Each project is a bold statement. Our work reflects more than architecture; it reflects identity, pride, and the promise of a redefined future. We design with meaning, build with purpose, and lead with a vision that honors the continent’s past while boldly shaping its tomorrow. This isn't just real estate. This is storytelling through structure. This is Africa, built by Reseco.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- VIDEO -->
-  <section class="about-videos" data-aos="zoom-in">
-    <div class="about-videos-container">
-      <h2>Inside Reseco Africa</h2>
-      <p>Click to watch our story:</p>
-      <div class="video-thumbnail" onclick="playVideo()">
-        <img src="assets/cofounders/RESE.png" alt="Reseco Video" class="thumbnail-img">
-        <div class="play-overlay">
-          <span class="play-icon">▶</span>
-          <p>Tap to watch</p>
+        <div class="hero-card">
+          <div class="hero-stats">
+            <div class="hero-stat"><h3>5</h3><p>Featured Properties</p></div>
+            <div class="hero-stat"><h3>1,200+</h3><p>Happy Clients</p></div>
+            <div class="hero-stat"><h3>10 yrs</h3><p>Combined Experience</p></div>
+          </div>
         </div>
       </div>
-      <video id="resecovideo" class="custom-video" controls loop muted poster="assets/about/cover.jpg">
-        <source src="Reseco Africa.mp4" type="video/mp4">
-      </video>
-    </div>
-  </section>
 
-  <!-- CTA -->
-  <section class="cta-banner" data-aos="fade-up">
-    <div class="cta-content">
-      <h2>Ready to take the next step?</h2>
-      <p>Secure your future with Reseco Africa or join our ambassadors today.</p>
-      <div class="cta-buttons">
-        <a href="contactus.html" class="cta-btn primary-btn">Contact Us to Purchase</a>
-        <a href="joinamb.html" class="cta-btn secondary-btn">Join Our Ambassadors</a>
+      <aside class="hero-visual" aria-hidden="false">
+        <div class="hero-image-card">
+          <img src="assets/KOR_8867.webp" alt="Reseco development aerial" loading="lazy">
+          <div class="hero-image-overlay">
+            <h4>Design. Community. Legacy.</h4>
+            <p>Thoughtful developments that deliver value and lasting impact.</p>
+          </div>
+        </div>
+        <div style="margin-top:12px;color:#38513f;font-size:0.95rem;">Photo credit: Reseco archive</div>
+      </aside>
+    </section>
+
+    <!-- Values grid -->
+    <section style="margin-top:18px;">
+      <h2 class="section-title">What Sets Us Apart</h2>
+      <p class="lead">We design with purpose, build with integrity, and partner with communities to create lasting impact.</p>
+      <div class="values-grid">
+        <div class="values-card" data-aos="fade-up"><h4>Community-first Design</h4><p>Projects shaped by resident needs, walkable streets and shared green spaces that foster connection.</p></div>
+        <div class="values-card" data-aos="fade-up" data-aos-delay="80"><h4>Transparent Processes</h4><p>Clear pricing, milestones and timelines so investors and buyers stay informed and confident.</p></div>
+        <div class="values-card" data-aos="fade-up" data-aos-delay="160"><h4>Sustainable Thinking</h4><p>Energy-conscious materials and water-wise landscapes that reduce long-term costs and environmental impact.</p></div>
+        <div class="values-card" data-aos="fade-up" data-aos-delay="240"><h4>Local Partnerships</h4><p>We hire local contractors and source materials responsibly, ensuring projects benefit nearby communities.</p></div>
+      </div>
+    </section>
+
+    <!-- Timeline / milestones -->
+    <section class="timeline" aria-label="Milestones and history">
+      <h3 class="section-title">Our Journey</h3>
+      <div class="timeline-item"><div class="dot" aria-hidden="true"></div><div><h5>2016 — Foundations</h5><p>Reseco formed with a focus on small-scale residential developments and an emphasis on quality craftsmanship.</p></div></div>
+      <div class="timeline-item"><div class="dot" aria-hidden="true"></div><div><h5>2019 — Growth</h5><p>Expanded into mixed-use communities and launched investor-friendly payment plans.</p></div></div>
+      <div class="timeline-item"><div class="dot" aria-hidden="true"></div><div><h5>2022 — Community Impact</h5><p>Introduced community programs and local hiring policies to amplify neighborhood benefits.</p></div></div>
+    </section>
+
+    <!-- Team -->
+    <section class="team" aria-labelledby="team-title">
+      <h3 id="team-title" class="section-title">Meet the Team</h3>
+      <p class="lead">A small, dedicated team combining property development, finance, and community engagement expertise.</p>
+      <div class="team-grid">
+        <div class="team-card" data-aos="flip-left"><div class="team-avatar">RA</div><h4>Rasheed Adebayo</h4><p>Founder & CEO</p></div>
+        <div class="team-card" data-aos="flip-left" data-aos-delay="80"><div class="team-avatar">EM</div><h4>Emeka Nnaji</h4><p>Head of Development</p></div>
+        <div class="team-card" data-aos="flip-left" data-aos-delay="160"><div class="team-avatar">OL</div><h4>Olivia Lanre</h4><p>Community Partnerships</p></div>
+        <div class="team-card" data-aos="flip-left" data-aos-delay="240"><div class="team-avatar">MA</div><h4>Mary Amaka</h4><p>Operations & Finance</p></div>
+      </div>
+
+      <div class="stats-bar" role="list" aria-label="Key stats">
+        <div class="stat" role="listitem"><h3>5</h3><p>Active Developments</p></div>
+        <div class="stat" role="listitem"><h3>1,200+</h3><p>Clients Served</p></div>
+        <div class="stat" role="listitem"><h3>98%</h3><p>Customer Satisfaction</p></div>
+      </div>
+    </section>
+
+    <!-- Video and description -->
+    <section class="video-wrapper">
+      <div class="video-preview" id="videoPreview" tabindex="0" role="button" aria-label="Play about video">
+        <img src="assets/about/cover.jpg" alt="Reseco story">
+        <div class="play">▶</div>
+      </div>
+      <div class="video-desc">
+        <h3 class="section-title">Inside Reseco Africa</h3>
+        <p class="lead">Watch a short presentation about our people, projects and the communities we serve. The video highlights our approach to sustainable developments and how investments are structured to protect buyers and investors.</p>
+      </div>
+    </section>
+
+    <!-- Modal for video -->
+    <div class="modal" id="videoModal" aria-hidden="true">
+      <div class="modal-inner" role="dialog" aria-modal="true" aria-label="About video">
+        <button id="modalClose" style="position:absolute;right:12px;top:12px;z-index:10;background:transparent;border:none;color:#fff;font-size:22px;">×</button>
+        <video id="aboutVideo" controls playsinline>
+          <source src="Reseco Africa.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
-  </section>
+
+    <!-- CTA -->
+    <section class="about-cta" data-aos="fade-up">
+      <div>
+        <h3>Ready to invest or partner with us?</h3>
+        <p style="opacity:0.95;margin:6px 0 0;">Contact our team to discuss opportunities, site visits or ambassador programs.</p>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center;">
+        <a href="contactus.html">Contact Us</a>
+        <a href="properties.html" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.18);padding:10px 18px;border-radius:10px;text-decoration:none;">View Properties</a>
+      </div>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer" data-aos="fade-up">
@@ -179,28 +238,38 @@
   <script>
     AOS.init({ duration: 800, once: true });
 
-    function playVideo() {
-      const video = document.getElementById("resecovideo");
-      document.querySelector(".video-thumbnail").style.display = "none";
-      video.style.display = "block";
-      video.muted = false;
-      video.play();
-    }
+    // Video modal handling
+    (function(){
+      var preview = document.getElementById('videoPreview');
+      var modal = document.getElementById('videoModal');
+      var closeBtn = document.getElementById('modalClose');
+      var video = document.getElementById('aboutVideo');
 
+      function openModal(){ if(!modal) return; modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); if(video){ try{ video.currentTime = 0; video.play(); }catch(e){} } }
+      function closeModal(){ if(!modal) return; modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); if(video){ try{ video.pause(); video.currentTime = 0; }catch(e){} } }
+
+      if(preview){ preview.addEventListener('click', openModal); preview.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openModal(); } }); }
+      if(closeBtn) closeBtn.addEventListener('click', closeModal);
+      if(modal) modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+      document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal && modal.classList.contains('open')) closeModal(); });
+    })();
+
+    // Mobile navigation helpers
     function toggleMobileMenu() {
-      document.getElementById("mobileNav").classList.toggle("open");
+      var el = document.getElementById('mobileNav'); if(!el) return; el.classList.toggle('open');
     }
 
     function toggleMobileDropdown(e) {
       e.preventDefault();
-      e.target.closest(".dropdown").classList.toggle("open");
+      var dropdown = e.target.closest('.dropdown'); if(!dropdown) return; dropdown.classList.toggle('open');
     }
 
-    document.getElementById("hamburger").addEventListener("click", toggleMobileMenu);
-    window.addEventListener("scroll", () => {
-    const navbar = document.querySelector(".navbar");
-    navbar.classList.toggle("scrolled", window.scrollY > 50);
+    var hb = document.getElementById('hamburger'); if(hb) hb.addEventListener('click', toggleMobileMenu);
+
+    window.addEventListener('scroll', function(){
+      var navbar = document.querySelector('.navbar'); if(!navbar) return; navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
   </script>
+  <script src="nav.js"></script>
 </body>
 </html>
