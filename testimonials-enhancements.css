@@ -1,0 +1,106 @@
+/* Enhancements for testimonial section UI */
+.testimonial-section {
+  background: linear-gradient(180deg, rgba(79,200,116,0.04), rgba(244,255,236,0.9));
+  padding: 100px 5%;
+  border-radius: 24px;
+  margin: 40px auto;
+  box-shadow: 0 8px 40px rgba(27,56,43,0.04);
+}
+
+.testimonial-grid {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+
+/* Make cards slightly larger and more tactile */
+.testimonial-card {
+  padding: 36px;
+  border-radius: 20px;
+  transition: transform 0.4s cubic-bezier(.2,.9,.3,1), box-shadow 0.4s;
+}
+
+.testimonial-card:hover,
+.testimonial-card:focus-within,
+.testimonial-card:focus {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 35px 70px rgba(27,56,43,0.12);
+}
+
+/* Improve quote readability */
+.testimonial-quote {
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: #274a38;
+}
+
+/* Larger, photo-style avatars when available */
+.client-avatar {
+  width: 64px;
+  height: 64px;
+  font-size: 1.3rem;
+  box-shadow: 0 12px 30px rgba(27,56,43,0.12);
+}
+
+/* Make client-info stand out */
+.client-info {
+  gap: 18px;
+  padding-top: 22px;
+}
+
+/* Animate stars lightly on hover */
+.testimonial-rating .star {
+  transition: transform 0.28s ease, filter 0.28s ease;
+}
+.testimonial-card:hover .testimonial-rating .star {
+  transform: translateY(-3px) scale(1.06);
+  filter: drop-shadow(0 6px 10px rgba(255,192,39,0.08));
+}
+
+/* Badge refinement */
+.testimonial-badge {
+  top: 18px;
+  right: 18px;
+  padding: 6px 14px;
+  font-size: 0.72rem;
+}
+
+/* Make testimonial grid responsive with horizontal scroll on small screens */
+@media (max-width: 1024px) {
+  .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .testimonial-grid {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .testimonial-grid .testimonial-card {
+    min-width: 280px;
+    flex: 0 0 85%;
+  }
+  .testimonial-card { padding: 22px; }
+}
+
+/* Accessibility: focus outline */
+.testimonial-card:focus {
+  outline: 3px solid rgba(79,200,116,0.18);
+  outline-offset: 6px;
+}
+
+/* Subtle decorative corner */
+.testimonial-card::after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  bottom: -30px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, rgba(79,200,116,0.06), transparent 40%);
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
